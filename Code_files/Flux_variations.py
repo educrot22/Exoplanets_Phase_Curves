@@ -188,14 +188,6 @@ def detect_flux_variations(t0, nb_days, planets, filter, t_lapse, min_var, nb_po
 
     total_phase_curve_derivative = np.gradient(total_phase_curve, t)
 
-    plt.figure()
-    plt.plot(t, total_phase_curve, label="Total phase curve")
-    plt.plot(t, total_phase_curve_derivative, label="Derivative")
-    plt.xlabel("Time")
-    plt.grid()
-    plt.legend()
-    plt.show()
-
     # Detect variations in the total phase curve derivative that exceed the specified threshold
 
     # threshold = min_var / (t_lapse/24)
@@ -206,43 +198,64 @@ def detect_flux_variations(t0, nb_days, planets, filter, t_lapse, min_var, nb_po
     #         variations.append((t[i], total_phase_curve_derivative[i]))
 
 
-    # 
+    # Looking for the extrema
 
 
     variations = []
     
     maxima, max_prop = find_peaks(total_phase_curve)
-    print(maxima)
+    # print(maxima)
+    print(f"Number of maxima: {len(maxima)}")
     # print(max_prop)
     minima, min_prop = find_peaks(-total_phase_curve)
-    print(minima)
+    # print(minima)
+    print(f"Number of minima: {len(minima)}")
 
-    if maxima[0]>minima[0]:
-        for i in range(maxima.shape):
-            if total_phase_curve[maxima[i]]-total_phase_curve[minima[i]] < min_var:
-                variations.append((t[minima[i]],total_phase_curve[maxima[i]]-total_phase_curve[minima[i]]))
+    if maxima[0]>minima[0]: # If the first extrmum is a minimum
+        for i in range(len(maxima)):
+            if total_phase_curve[maxima[i]] - total_phase_curve[minima[i]] > min_var: # Comparing with previous minimum
+                variations.append((t[minima[i]],total_phase_curve[maxima[i]]-total_phase_curve[minima[i]],(t[maxima[i]]-t[minima[i]])*24))
+            if i < len(minima)-1 and total_phase_curve[maxima[i]] - total_phase_curve[minima[i+1]] > min_var: # Comparing with folowing minimum
+                variations.append((t[maxima[i]],total_phase_curve[maxima[i]] - total_phase_curve[minima[i+1]],(t[minima[i+1]]-t[maxima[i]])*24))
+    else:
+        for i in range(len(maxima)): # If the first extremum is a maximum
+            if i != 0 and total_phase_curve[maxima[i]] - total_phase_curve[minima[i-1]] > min_var: # Comparing with previous minimum
+                variations.append((t[minima[i-1]],total_phase_curve[maxima[i]]-total_phase_curve[minima[i]],(t[maxima[i]]-t[minima[i-1]])*24))
+            if total_phase_curve[maxima[i]] - total_phase_curve[minima[i]] > min_var: # Comparing with following minimum
+                variations.append((t[maxima[i]],total_phase_curve[maxima[i]]-total_phase_curve[minima[i]],(t[minima[i]]-t[maxima[i]])*24))
+        
+    variations = np.array(variations).T
 
+    print(variations)
+    
+    plt.figure()
+    plt.plot(t, total_phase_curve, label="Total phase curve")
+    plt.scatter(variations[0]+variations[2]/48,variations[1], marker="x", color='red', label="Quick variation")
+    # plt.plot(t, total_phase_curve_derivative, label="Derivative")
+    plt.xlabel("Time")
+    plt.grid()
+    plt.legend()
+    plt.show()
 
-    return np.array(variations)
+    return variations
 
 
 def main():
     # Example usage
     t0 = 11131.5000000  # Initial time in BJD_TBD - 2450000 (April 1, 2026)
-    nb_days = 100    # Number of days to consider
+    nb_days = 1000   # Number of days to consider
     planets = "defgh"  # Planets to consider
     filter = "F1500W"  # MIRI filter to use
     t_lapse = 10  # Lapse of time during which to detect variations (in hours)
-    min_var = 300  # Minimum flux variation threshold (in ppm)
-    nb_points = 10000  # Number of points to use for the phase curve calculation
+    min_var = 400  # Minimum flux variation threshold (in ppm)
+    nb_points = 100000  # Number of points to use for the phase curve calculation
 
     variations = detect_flux_variations(t0, nb_days, planets, filter, t_lapse, min_var, nb_points)
     print("Detected flux variations:")
-    for time, variation in variations:
-        print(f"Time: {time}, Variation: {variation}")
+    for time, variation, duration in variations.T:
+        print(f"Time: {time}, Variation: {variation} ppm, Duration: {duration} hours")
 
-    print(f"Total number of detected variations: {len(variations)}")
-
+    print(f"Total number of detected variations: {variations.shape[1]}")
 
 if __name__ == "__main__":
     main()
