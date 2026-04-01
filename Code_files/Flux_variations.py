@@ -13,7 +13,7 @@ from Phase_curve_TTV import phase_TTV
 from Flux_wavelength import flux_ratio_miri, planet_equilibirium_temperature
 from TRAPPIST1_parameters import *
 
-def detect_flux_variations(t0, nb_days, planets, filter, t_lapse, min_var, nb_points=10000):
+def detect_flux_variations(t0, nb_days, planets, filter, t_lapse, min_var, nb_points=10000, save_output = True, output_path = "Flux_variations", show_plot=False):
     """
     Detect quick flux variations in the total phase curve that could be interesting for follow-up observations.
 
@@ -29,7 +29,7 @@ def detect_flux_variations(t0, nb_days, planets, filter, t_lapse, min_var, nb_po
     :param filter: MIRI filter to use for the phase curve (F1500W or F1280W)
     :type filter: str
 
-    :param t_lapse: Lapse of time during which to detect variations (in hours)
+    :param t_lapse: Targeted lapse of time during which to detect variations (in hours)
     :type t_lapse: float
 
     :param min_var: Minimum flux variation threshold (in ppm)
@@ -37,6 +37,15 @@ def detect_flux_variations(t0, nb_days, planets, filter, t_lapse, min_var, nb_po
 
     :param nb_points: Number of points to use for the phase curve calculation (default: 10000)
     :type nb_points: int
+
+    :param save_output: Whether to save the output in a .txt file and plot in a .png file (default: True)
+    :type save_output: bool
+
+    :param output_path: The path to the output file (default: "Flux_variations")
+    :param output_path: str
+
+    :param show_plot: Whether to show the plot (default: True)
+    :param show_plot: bool
 
     :return: array containing detected flux variations with their corresponding times
     :rtype: numpy.ndarray
@@ -184,18 +193,6 @@ def detect_flux_variations(t0, nb_days, planets, filter, t_lapse, min_var, nb_po
     if 'h' in planets:
         total_phase_curve += phase_curve_h_TTV
 
-    # Compute the derivative of the total phase curve
-
-    total_phase_curve_derivative = np.gradient(total_phase_curve, t)
-
-    # Detect variations in the total phase curve derivative that exceed the specified threshold
-
-    # threshold = min_var / (t_lapse/24)
-
-    # variations = []
-    # for i in range(len(total_phase_curve_derivative)):
-    #     if abs(total_phase_curve_derivative[i]) > threshold:
-    #         variations.append((t[i], total_phase_curve_derivative[i]))
 
 
     # Looking for the extrema
@@ -205,11 +202,11 @@ def detect_flux_variations(t0, nb_days, planets, filter, t_lapse, min_var, nb_po
     
     maxima, max_prop = find_peaks(total_phase_curve)
     # print(maxima)
-    print(f"Number of maxima: {len(maxima)}")
+    # print(f"Number of maxima: {len(maxima)}")
     # print(max_prop)
     minima, min_prop = find_peaks(-total_phase_curve)
     # print(minima)
-    print(f"Number of minima: {len(minima)}")
+    # print(f"Number of minima: {len(minima)}")
 
     if maxima[0]>minima[0]: # If the first extrmum is a minimum
         for i in range(len(maxima)):
@@ -223,19 +220,25 @@ def detect_flux_variations(t0, nb_days, planets, filter, t_lapse, min_var, nb_po
                 variations.append((t[minima[i-1]],total_phase_curve[maxima[i]]-total_phase_curve[minima[i]],(t[maxima[i]]-t[minima[i-1]])*24))
             if total_phase_curve[maxima[i]] - total_phase_curve[minima[i]] > min_var: # Comparing with following minimum
                 variations.append((t[maxima[i]],total_phase_curve[maxima[i]]-total_phase_curve[minima[i]],(t[minima[i]]-t[maxima[i]])*24))
+
+    if save_output:
+        np.savetxt(f"{output_path}.txt", variations, delimiter=",", header = "t0 (BJD_TBD - 2450000), Variation (ppm), Duration (hours)")
         
     variations = np.array(variations).T
 
-    print(variations)
-    
-    plt.figure()
+
+    plt.figure(figsize=(16,10))
     plt.plot(t, total_phase_curve, label="Total phase curve")
     plt.scatter(variations[0]+variations[2]/48,variations[1], marker="x", color='red', label="Quick variation")
-    # plt.plot(t, total_phase_curve_derivative, label="Derivative")
+    plt.title("Quick variations detected in total phase curve")
     plt.xlabel("Time")
+    plt.ylabel("Flux (ppm)")
     plt.grid()
     plt.legend()
-    plt.show()
+    if save_output:
+        plt.savefig(f"{output_path}.png", bbox_inches="tight")
+    if show_plot:
+        plt.show()
 
     return variations
 
@@ -250,7 +253,14 @@ def main():
     min_var = 400  # Minimum flux variation threshold (in ppm)
     nb_points = 100000  # Number of points to use for the phase curve calculation
 
-    variations = detect_flux_variations(t0, nb_days, planets, filter, t_lapse, min_var, nb_points)
+    save_output = True
+
+    output_path = f"Flux_variations_output/Variations_{int(t0)}_{nb_days}d_{min_var}ppm"
+
+    show_plot = False
+
+    variations = detect_flux_variations(t0, nb_days, planets, filter, t_lapse, min_var, nb_points, save_output=save_output, output_path=output_path, show_plot=show_plot)
+    # print(variations.shape)
     print("Detected flux variations:")
     for time, variation, duration in variations.T:
         print(f"Time: {time}, Variation: {variation} ppm, Duration: {duration} hours")
