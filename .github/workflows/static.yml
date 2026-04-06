@@ -28,7 +28,7 @@ jobs:
 
       - name: Generate API documentation
         run: |
-          sphinx-apidoc -o docs/source .
+          sphinx-apidoc -o docs/source -e -M .
 
       - name: Build documentation
         run: |
