@@ -5,3 +5,5 @@
 Code_files/__pycache__
 
 .vscode
+
+docs/build/

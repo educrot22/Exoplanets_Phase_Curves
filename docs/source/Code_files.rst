@@ -20,6 +20,14 @@ Code\_files.Comparisons\_bare\_rocks\_atm module
    :show-inheritance:
    :undoc-members:
 
+Code\_files.Flux\_variations module
+-----------------------------------
+
+.. automodule:: Code_files.Flux_variations
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
 Code\_files.Flux\_wavelength module
 -----------------------------------
 
@@ -76,18 +84,18 @@ Code\_files.Phase\_curve\_v1 module
    :show-inheritance:
    :undoc-members:
 
-Code\_files.Phase\_curves\_comparison module
---------------------------------------------
-
-.. automodule:: Code_files.Phase_curves_comparison
-   :members:
-   :show-inheritance:
-   :undoc-members:
-
 Code\_files.Phoenix module
 --------------------------
 
 .. automodule:: Code_files.Phoenix
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+Code\_files.Plot\_combined\_analysis module
+-------------------------------------------
+
+.. automodule:: Code_files.Plot_combined_analysis
    :members:
    :show-inheritance:
    :undoc-members:
