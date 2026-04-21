@@ -13,10 +13,10 @@ from scipy.constants import c, h, k, sigma
 # from tqdm import tqdm
 # import time
 
-from Orbital_motion import compute_true_anomaly
-from Transits import eclipse
-from Phase_curve_v1 import star_planet_separation, flux_star, flux_planet, luminosity_planet_dayside, phase_curve
-from TRAPPIST1_parameters import *
+from Code_files.Orbital_motion import compute_true_anomaly
+from Code_files.Transits import eclipse
+from Code_files.Phase_curve_v1 import star_planet_separation, flux_star, flux_planet, luminosity_planet_dayside, phase_curve
+from Code_files.TRAPPIST1_parameters import *
 
 def flux_model_interp(l,model='sphinx'):
     """

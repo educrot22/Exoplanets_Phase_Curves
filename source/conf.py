@@ -1,6 +1,7 @@
 import os
 import sys
-sys.path.insert(0, os.path.abspath("../../Code_files"))
+sys.path.insert(0, os.path.abspath(".."))
+
 # sys.path.insert(0, os.path.abspath("../.."))
 # print("DEBUG sys.path:", sys.path[:5])  # affiche les premiers chemins pour debug
 # print("DEBUG cwd:", os.getcwd())  # affiche le répertoire courant de compilation

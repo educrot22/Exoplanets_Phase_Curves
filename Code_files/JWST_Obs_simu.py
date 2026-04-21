@@ -11,7 +11,7 @@ from astropy.time import Time
 from tqdm import tqdm
 import time
 
-from Phase_curve_TTV import phase_curve_simulation
+from Code_files.Phase_curve_TTV import phase_curve_simulation
 
 def phase_curve_visit(planets, redistribution, filter, model, unit, nb_points=10000, Keplerian=True):
     """
