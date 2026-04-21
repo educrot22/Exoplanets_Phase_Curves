@@ -1,0 +1,20 @@
+# _config.yml
+
+title: Exoplanets Phase Curves Documentation
+description: Documentation for the Exoplanets Phase Curves project
+
+## GitHub Pages base URL
+#baseurl: "."   # Name of your GitHub repo (important!)
+
+url: "https://github.com/LJ-Cartigny/Exoplanets_Phase_Curves/"
+baseurl: "/Exoplanets_Phase_Curves"
+
+theme: minima   # ou autre thème
+
+# Optional: if you want pretty URLs
+permalink: pretty
+
+markdown: kramdown
+kramdown:
+  input: GFM
+highlighter: rouge
