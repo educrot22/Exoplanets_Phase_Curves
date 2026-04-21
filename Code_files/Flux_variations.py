@@ -218,7 +218,9 @@ def detect_flux_variations(t0, nb_days, planets, filter, t_lapse, min_var, nb_po
         for i in range(len(maxima)): # If the first extremum is a maximum
             if i != 0 and total_phase_curve[maxima[i]] - total_phase_curve[minima[i-1]] > min_var: # Comparing with previous minimum
                 variations.append((t[minima[i-1]],total_phase_curve[maxima[i]]-total_phase_curve[minima[i]],(t[maxima[i]]-t[minima[i-1]])*24))
-            if total_phase_curve[maxima[i]] - total_phase_curve[minima[i]] > min_var: # Comparing with following minimum
+            # if i >= len(minima):
+            #     break
+            if i < len(minima)-1 and total_phase_curve[maxima[i]] - total_phase_curve[minima[i]] > min_var: # Comparing with following minimum
                 variations.append((t[maxima[i]],total_phase_curve[maxima[i]]-total_phase_curve[minima[i]],(t[minima[i]]-t[maxima[i]])*24))
 
     if save_output:
@@ -245,15 +247,15 @@ def detect_flux_variations(t0, nb_days, planets, filter, t_lapse, min_var, nb_po
 
 def main():
     # Example usage
-    t0 = 11131.5000000  # Initial time in BJD_TBD - 2450000 (April 1, 2026)
-    nb_days = 1000   # Number of days to consider
+    t0 = 11192.5000000  # Initial time in BJD_TBD - 2450000 (June 1st, 2026)
+    nb_days = 500   # Number of days to consider
     planets = "defgh"  # Planets to consider
     filter = "F1500W"  # MIRI filter to use
     t_lapse = 10  # Lapse of time during which to detect variations (in hours)
     min_var = 400  # Minimum flux variation threshold (in ppm)
     nb_points = 100000  # Number of points to use for the phase curve calculation
 
-    save_output = True
+    save_output = False
 
     output_path = f"Flux_variations_output/Variations_{int(t0)}_{nb_days}d_{min_var}ppm"
 
