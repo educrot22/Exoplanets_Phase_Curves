@@ -1,0 +1,42 @@
+<<<<<<< HEAD
+.. Exoplanets_Phase_Curves documentation master file, created by
+   sphinx-quickstart on Mon Apr  6 16:54:30 2026.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+Exoplanets_Phase_Curves documentation
+=====================================
+
+Add your content using ``reStructuredText`` syntax. See the
+`reStructuredText <https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html>`_
+documentation for details.
+
+=======
+Exoplanets_Phase_Curves documentation
+=====================================
+
+Introduction
+------------
+
+.. include:: ../README.md
+   :parser: myst_parser.sphinx_
+>>>>>>> a2123c21df2fcd9b74867bbfb3c5e49923123a59
+
+
+Installation
+------------
+
+::
+
+   git clone git@github.com:LJ-Cartigny/Exoplanets_Phase_Curves.git
+   cd Exoplanets_Phase_Curves
+   pip install -r requirements.txt
+
+
+API Reference
+-------------
+
+.. toctree::
+   :maxdepth: 2
+
+   Code_files

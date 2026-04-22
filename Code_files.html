@@ -1,0 +1,1796 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Code_files functions &mdash; Exoplanets_Phase_Curves 0.0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=d45e8c67"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Exoplanets_Phase_Curves documentation" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Exoplanets_Phase_Curves
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Code_files functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-Code_files.Comparison_GO3077">Code_files.Comparison_GO3077 module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.Comparison_GO3077.load_data"><code class="docutils literal notranslate"><span class="pre">load_data()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.Comparison_GO3077.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-Code_files.Comparisons_bare_rocks_atm">Code_files.Comparisons_bare_rocks_atm module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.Comparisons_bare_rocks_atm.nb_points"><code class="docutils literal notranslate"><span class="pre">nb_points</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.Comparisons_bare_rocks_atm.Keplerian"><code class="docutils literal notranslate"><span class="pre">Keplerian</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.Comparisons_bare_rocks_atm.planets"><code class="docutils literal notranslate"><span class="pre">planets</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.Comparisons_bare_rocks_atm.filter"><code class="docutils literal notranslate"><span class="pre">filter</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.Comparisons_bare_rocks_atm.save_plots"><code class="docutils literal notranslate"><span class="pre">save_plots</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.Comparisons_bare_rocks_atm.do_simulation"><code class="docutils literal notranslate"><span class="pre">do_simulation</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.Comparisons_bare_rocks_atm.plot_individual_planets"><code class="docutils literal notranslate"><span class="pre">plot_individual_planets</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.Comparisons_bare_rocks_atm.run_comparison"><code class="docutils literal notranslate"><span class="pre">run_comparison()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-Code_files.Flux_wavelength">Code_files.Flux_wavelength module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.Flux_wavelength.flux_model_interp"><code class="docutils literal notranslate"><span class="pre">flux_model_interp()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.Flux_wavelength.Planck_law"><code class="docutils literal notranslate"><span class="pre">Planck_law()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.Flux_wavelength.flux_black_body"><code class="docutils literal notranslate"><span class="pre">flux_black_body()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.Flux_wavelength.planet_equilibirium_temperature"><code class="docutils literal notranslate"><span class="pre">planet_equilibirium_temperature()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.Flux_wavelength.flux_ratio_black_body"><code class="docutils literal notranslate"><span class="pre">flux_ratio_black_body()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.Flux_wavelength.conversion_IS_to_mJy"><code class="docutils literal notranslate"><span class="pre">conversion_IS_to_mJy()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.Flux_wavelength.flux_mJy"><code class="docutils literal notranslate"><span class="pre">flux_mJy()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.Flux_wavelength.flux_mJy_array"><code class="docutils literal notranslate"><span class="pre">flux_mJy_array()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.Flux_wavelength.conversion_mJy_to_IS"><code class="docutils literal notranslate"><span class="pre">conversion_mJy_to_IS()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.Flux_wavelength.flux_Wm2"><code class="docutils literal notranslate"><span class="pre">flux_Wm2()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.Flux_wavelength.filter"><code class="docutils literal notranslate"><span class="pre">filter()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.Flux_wavelength.quantum_efficiency"><code class="docutils literal notranslate"><span class="pre">quantum_efficiency()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.Flux_wavelength.flux_star_miri"><code class="docutils literal notranslate"><span class="pre">flux_star_miri()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.Flux_wavelength.flux_planet_miri"><code class="docutils literal notranslate"><span class="pre">flux_planet_miri()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.Flux_wavelength.flux_ratio_miri"><code class="docutils literal notranslate"><span class="pre">flux_ratio_miri()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.Flux_wavelength.integrate_flux_model_mJy"><code class="docutils literal notranslate"><span class="pre">integrate_flux_model_mJy()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.Flux_wavelength.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-Code_files.JWST_Obs_plot">Code_files.JWST_Obs_plot module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-Code_files.JWST_Obs_simu">Code_files.JWST_Obs_simu module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.JWST_Obs_simu.phase_curve_visit"><code class="docutils literal notranslate"><span class="pre">phase_curve_visit()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-Code_files.MIRI_filter">Code_files.MIRI_filter module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.MIRI_filter.plot_filters"><code class="docutils literal notranslate"><span class="pre">plot_filters()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-Code_files.Orbital_motion">Code_files.Orbital_motion module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.Orbital_motion.kepler_equation"><code class="docutils literal notranslate"><span class="pre">kepler_equation()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.Orbital_motion.solve_kepler"><code class="docutils literal notranslate"><span class="pre">solve_kepler()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.Orbital_motion.true_anomaly"><code class="docutils literal notranslate"><span class="pre">true_anomaly()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.Orbital_motion.compute_true_anomaly"><code class="docutils literal notranslate"><span class="pre">compute_true_anomaly()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.Orbital_motion.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-Code_files.Phase_curve_TTV">Code_files.Phase_curve_TTV module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.Phase_curve_TTV.phase_TTV"><code class="docutils literal notranslate"><span class="pre">phase_TTV()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.Phase_curve_TTV.phase_curve_simulation"><code class="docutils literal notranslate"><span class="pre">phase_curve_simulation()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.Phase_curve_TTV.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-Code_files.Phase_curve_v1">Code_files.Phase_curve_v1 module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.Phase_curve_v1.phase_angle"><code class="docutils literal notranslate"><span class="pre">phase_angle()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.Phase_curve_v1.phase_function"><code class="docutils literal notranslate"><span class="pre">phase_function()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.Phase_curve_v1.phase_planet"><code class="docutils literal notranslate"><span class="pre">phase_planet()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.Phase_curve_v1.star_planet_separation"><code class="docutils literal notranslate"><span class="pre">star_planet_separation()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.Phase_curve_v1.flux_star"><code class="docutils literal notranslate"><span class="pre">flux_star()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.Phase_curve_v1.flux_planet"><code class="docutils literal notranslate"><span class="pre">flux_planet()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.Phase_curve_v1.surface_sphere"><code class="docutils literal notranslate"><span class="pre">surface_sphere()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.Phase_curve_v1.luminosity_planet_dayside"><code class="docutils literal notranslate"><span class="pre">luminosity_planet_dayside()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.Phase_curve_v1.phase_curve"><code class="docutils literal notranslate"><span class="pre">phase_curve()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.Phase_curve_v1.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#code-files-phase-curves-comparison-module">Code_files.Phase_curves_comparison module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-Code_files.Phoenix">Code_files.Phoenix module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.Phoenix.Teff"><code class="docutils literal notranslate"><span class="pre">Teff</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.Phoenix.Rs"><code class="docutils literal notranslate"><span class="pre">Rs</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.Phoenix.Ms"><code class="docutils literal notranslate"><span class="pre">Ms</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.Phoenix.logg"><code class="docutils literal notranslate"><span class="pre">logg</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.Phoenix.dist"><code class="docutils literal notranslate"><span class="pre">dist</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.Phoenix.Rp"><code class="docutils literal notranslate"><span class="pre">Rp</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.Phoenix.a"><code class="docutils literal notranslate"><span class="pre">a</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.Phoenix.e"><code class="docutils literal notranslate"><span class="pre">e</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.Phoenix.T14"><code class="docutils literal notranslate"><span class="pre">T14</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.Phoenix.P"><code class="docutils literal notranslate"><span class="pre">P</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.Phoenix.generate_phoenix_model"><code class="docutils literal notranslate"><span class="pre">generate_phoenix_model()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-Code_files.Solar_System_constants">Code_files.Solar_System_constants module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.Solar_System_constants.L_Sun"><code class="docutils literal notranslate"><span class="pre">L_Sun</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.Solar_System_constants.M_Sun"><code class="docutils literal notranslate"><span class="pre">M_Sun</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.Solar_System_constants.R_Sun"><code class="docutils literal notranslate"><span class="pre">R_Sun</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.Solar_System_constants.M_Earth"><code class="docutils literal notranslate"><span class="pre">M_Earth</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.Solar_System_constants.R_Earth"><code class="docutils literal notranslate"><span class="pre">R_Earth</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.Solar_System_constants.M_Jupiter"><code class="docutils literal notranslate"><span class="pre">M_Jupiter</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.Solar_System_constants.R_Jupiter"><code class="docutils literal notranslate"><span class="pre">R_Jupiter</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-Code_files.TRAPPIST1_parameters">Code_files.TRAPPIST1_parameters module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.TRAPPIST1_parameters.dist_system"><code class="docutils literal notranslate"><span class="pre">dist_system</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.TRAPPIST1_parameters.T_eff_star"><code class="docutils literal notranslate"><span class="pre">T_eff_star</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.TRAPPIST1_parameters.R_star"><code class="docutils literal notranslate"><span class="pre">R_star</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.TRAPPIST1_parameters.M_star"><code class="docutils literal notranslate"><span class="pre">M_star</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.TRAPPIST1_parameters.L_star"><code class="docutils literal notranslate"><span class="pre">L_star</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.TRAPPIST1_parameters.wavelengths_T1_sphinx"><code class="docutils literal notranslate"><span class="pre">wavelengths_T1_sphinx</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.TRAPPIST1_parameters.flux_T1_sphinx"><code class="docutils literal notranslate"><span class="pre">flux_T1_sphinx</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.TRAPPIST1_parameters.wavelengths_T1_phoenix"><code class="docutils literal notranslate"><span class="pre">wavelengths_T1_phoenix</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.TRAPPIST1_parameters.flux_T1_phoenix_mJy"><code class="docutils literal notranslate"><span class="pre">flux_T1_phoenix_mJy</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.TRAPPIST1_parameters.a_b"><code class="docutils literal notranslate"><span class="pre">a_b</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.TRAPPIST1_parameters.P_b"><code class="docutils literal notranslate"><span class="pre">P_b</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.TRAPPIST1_parameters.i_b"><code class="docutils literal notranslate"><span class="pre">i_b</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.TRAPPIST1_parameters.omega_b"><code class="docutils literal notranslate"><span class="pre">omega_b</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.TRAPPIST1_parameters.e_b"><code class="docutils literal notranslate"><span class="pre">e_b</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.TRAPPIST1_parameters.R_b"><code class="docutils literal notranslate"><span class="pre">R_b</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.TRAPPIST1_parameters.a_c"><code class="docutils literal notranslate"><span class="pre">a_c</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.TRAPPIST1_parameters.P_c"><code class="docutils literal notranslate"><span class="pre">P_c</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.TRAPPIST1_parameters.i_c"><code class="docutils literal notranslate"><span class="pre">i_c</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.TRAPPIST1_parameters.omega_c"><code class="docutils literal notranslate"><span class="pre">omega_c</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.TRAPPIST1_parameters.e_c"><code class="docutils literal notranslate"><span class="pre">e_c</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.TRAPPIST1_parameters.R_c"><code class="docutils literal notranslate"><span class="pre">R_c</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.TRAPPIST1_parameters.a_d"><code class="docutils literal notranslate"><span class="pre">a_d</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.TRAPPIST1_parameters.P_d"><code class="docutils literal notranslate"><span class="pre">P_d</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.TRAPPIST1_parameters.i_d"><code class="docutils literal notranslate"><span class="pre">i_d</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.TRAPPIST1_parameters.omega_d"><code class="docutils literal notranslate"><span class="pre">omega_d</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.TRAPPIST1_parameters.e_d"><code class="docutils literal notranslate"><span class="pre">e_d</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.TRAPPIST1_parameters.R_d"><code class="docutils literal notranslate"><span class="pre">R_d</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.TRAPPIST1_parameters.a_e"><code class="docutils literal notranslate"><span class="pre">a_e</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.TRAPPIST1_parameters.P_e"><code class="docutils literal notranslate"><span class="pre">P_e</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.TRAPPIST1_parameters.i_e"><code class="docutils literal notranslate"><span class="pre">i_e</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.TRAPPIST1_parameters.omega_e"><code class="docutils literal notranslate"><span class="pre">omega_e</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.TRAPPIST1_parameters.e_e"><code class="docutils literal notranslate"><span class="pre">e_e</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.TRAPPIST1_parameters.R_e"><code class="docutils literal notranslate"><span class="pre">R_e</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.TRAPPIST1_parameters.a_f"><code class="docutils literal notranslate"><span class="pre">a_f</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.TRAPPIST1_parameters.P_f"><code class="docutils literal notranslate"><span class="pre">P_f</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.TRAPPIST1_parameters.i_f"><code class="docutils literal notranslate"><span class="pre">i_f</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.TRAPPIST1_parameters.omega_f"><code class="docutils literal notranslate"><span class="pre">omega_f</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.TRAPPIST1_parameters.e_f"><code class="docutils literal notranslate"><span class="pre">e_f</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.TRAPPIST1_parameters.R_f"><code class="docutils literal notranslate"><span class="pre">R_f</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.TRAPPIST1_parameters.a_g"><code class="docutils literal notranslate"><span class="pre">a_g</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.TRAPPIST1_parameters.P_g"><code class="docutils literal notranslate"><span class="pre">P_g</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.TRAPPIST1_parameters.i_g"><code class="docutils literal notranslate"><span class="pre">i_g</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.TRAPPIST1_parameters.omega_g"><code class="docutils literal notranslate"><span class="pre">omega_g</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.TRAPPIST1_parameters.e_g"><code class="docutils literal notranslate"><span class="pre">e_g</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.TRAPPIST1_parameters.R_g"><code class="docutils literal notranslate"><span class="pre">R_g</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.TRAPPIST1_parameters.a_h"><code class="docutils literal notranslate"><span class="pre">a_h</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.TRAPPIST1_parameters.P_h"><code class="docutils literal notranslate"><span class="pre">P_h</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.TRAPPIST1_parameters.i_h"><code class="docutils literal notranslate"><span class="pre">i_h</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.TRAPPIST1_parameters.omega_h"><code class="docutils literal notranslate"><span class="pre">omega_h</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.TRAPPIST1_parameters.e_h"><code class="docutils literal notranslate"><span class="pre">e_h</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.TRAPPIST1_parameters.R_h"><code class="docutils literal notranslate"><span class="pre">R_h</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-Code_files.TTV">Code_files.TTV module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.TTV.period_TTV"><code class="docutils literal notranslate"><span class="pre">period_TTV()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.TTV.transit_peak"><code class="docutils literal notranslate"><span class="pre">transit_peak()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.TTV.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-Code_files.Transits">Code_files.Transits module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.Transits.transit_depth"><code class="docutils literal notranslate"><span class="pre">transit_depth()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.Transits.transit_impact_parameter"><code class="docutils literal notranslate"><span class="pre">transit_impact_parameter()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.Transits.eclipse_impact_parameter"><code class="docutils literal notranslate"><span class="pre">eclipse_impact_parameter()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.Transits.total_transit_duration"><code class="docutils literal notranslate"><span class="pre">total_transit_duration()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.Transits.flat_transit_duration"><code class="docutils literal notranslate"><span class="pre">flat_transit_duration()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.Transits.total_eclipse_duration"><code class="docutils literal notranslate"><span class="pre">total_eclipse_duration()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.Transits.flat_eclipse_duration"><code class="docutils literal notranslate"><span class="pre">flat_eclipse_duration()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.Transits.eclipse_phase"><code class="docutils literal notranslate"><span class="pre">eclipse_phase()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.Transits.eclipse"><code class="docutils literal notranslate"><span class="pre">eclipse()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Code_files.Transits.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Exoplanets_Phase_Curves</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Code_files functions</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/Code_files.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="code-files-functions">
+<h1>Code_files functions<a class="headerlink" href="#code-files-functions" title="Link to this heading"></a></h1>
+<section id="module-Code_files.Comparison_GO3077">
+<span id="code-files-comparison-go3077-module"></span><h2>Code_files.Comparison_GO3077 module<a class="headerlink" href="#module-Code_files.Comparison_GO3077" title="Link to this heading"></a></h2>
+<p>This module compares the phase curves observed during the JWST GO 3077 program with the simulations.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="Code_files.Comparison_GO3077.load_data">
+<span class="sig-prename descclassname"><span class="pre">Code_files.Comparison_GO3077.</span></span><span class="sig-name descname"><span class="pre">load_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Code_files.Comparison_GO3077.load_data" title="Link to this definition"></a></dt>
+<dd><p>Load the data from the .h5 file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filename</strong> (<em>str</em>) – The path to the .h5 file.</p></li>
+<li><p><strong>key</strong> (<em>str</em>) – The key to access the data in the .h5 file.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The data loaded from the file.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Code_files.Comparison_GO3077.main">
+<span class="sig-prename descclassname"><span class="pre">Code_files.Comparison_GO3077.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Code_files.Comparison_GO3077.main" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-Code_files.Comparisons_bare_rocks_atm">
+<span id="code-files-comparisons-bare-rocks-atm-module"></span><h2>Code_files.Comparisons_bare_rocks_atm module<a class="headerlink" href="#module-Code_files.Comparisons_bare_rocks_atm" title="Link to this heading"></a></h2>
+<p>This module is to compare the phase curves of TRAPPIST-1 planets with and without thick atmospheres.</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="Code_files.Comparisons_bare_rocks_atm.nb_points">
+<span class="sig-prename descclassname"><span class="pre">Code_files.Comparisons_bare_rocks_atm.</span></span><span class="sig-name descname"><span class="pre">nb_points</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">100000</span></em><a class="headerlink" href="#Code_files.Comparisons_bare_rocks_atm.nb_points" title="Link to this definition"></a></dt>
+<dd><p>Number of points in the simulation</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Code_files.Comparisons_bare_rocks_atm.Keplerian">
+<span class="sig-prename descclassname"><span class="pre">Code_files.Comparisons_bare_rocks_atm.</span></span><span class="sig-name descname"><span class="pre">Keplerian</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em><a class="headerlink" href="#Code_files.Comparisons_bare_rocks_atm.Keplerian" title="Link to this definition"></a></dt>
+<dd><p>Set to True to use Keplerian orbital periods, False for periods modified because of TTVs (not working yet)</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Code_files.Comparisons_bare_rocks_atm.planets">
+<span class="sig-prename descclassname"><span class="pre">Code_files.Comparisons_bare_rocks_atm.</span></span><span class="sig-name descname"><span class="pre">planets</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'defgh'</span></em><a class="headerlink" href="#Code_files.Comparisons_bare_rocks_atm.planets" title="Link to this definition"></a></dt>
+<dd><p>Planets to simulate</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Code_files.Comparisons_bare_rocks_atm.filter">
+<span class="sig-prename descclassname"><span class="pre">Code_files.Comparisons_bare_rocks_atm.</span></span><span class="sig-name descname"><span class="pre">filter</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'F1500W'</span></em><a class="headerlink" href="#Code_files.Comparisons_bare_rocks_atm.filter" title="Link to this definition"></a></dt>
+<dd><p>MIRI filter to use</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Code_files.Comparisons_bare_rocks_atm.save_plots">
+<span class="sig-prename descclassname"><span class="pre">Code_files.Comparisons_bare_rocks_atm.</span></span><span class="sig-name descname"><span class="pre">save_plots</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#Code_files.Comparisons_bare_rocks_atm.save_plots" title="Link to this definition"></a></dt>
+<dd><p>Set to True if you want to save the plots, False otherwise</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Code_files.Comparisons_bare_rocks_atm.do_simulation">
+<span class="sig-prename descclassname"><span class="pre">Code_files.Comparisons_bare_rocks_atm.</span></span><span class="sig-name descname"><span class="pre">do_simulation</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#Code_files.Comparisons_bare_rocks_atm.do_simulation" title="Link to this definition"></a></dt>
+<dd><p>Set to True if the simulation hasn’t been done yet, False if the phase curves were already saved and you don’t want to redo the simulation</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Code_files.Comparisons_bare_rocks_atm.plot_individual_planets">
+<span class="sig-prename descclassname"><span class="pre">Code_files.Comparisons_bare_rocks_atm.</span></span><span class="sig-name descname"><span class="pre">plot_individual_planets</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em><a class="headerlink" href="#Code_files.Comparisons_bare_rocks_atm.plot_individual_planets" title="Link to this definition"></a></dt>
+<dd><p>Set to True if you want to plot the individual planets as bare rocks to see their phases, False otherwise</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Code_files.Comparisons_bare_rocks_atm.run_comparison">
+<span class="sig-prename descclassname"><span class="pre">Code_files.Comparisons_bare_rocks_atm.</span></span><span class="sig-name descname"><span class="pre">run_comparison</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Code_files.Comparisons_bare_rocks_atm.run_comparison" title="Link to this definition"></a></dt>
+<dd><p>Runs the comparison of TRAPPIST-1 phase curves with and without thick atmospheres following the previous settings.</p>
+</dd></dl>
+
+</section>
+<section id="module-Code_files.Flux_wavelength">
+<span id="code-files-flux-wavelength-module"></span><h2>Code_files.Flux_wavelength module<a class="headerlink" href="#module-Code_files.Flux_wavelength" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="Code_files.Flux_wavelength.flux_model_interp">
+<span class="sig-prename descclassname"><span class="pre">Code_files.Flux_wavelength.</span></span><span class="sig-name descname"><span class="pre">flux_model_interp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">l</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'sphinx'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Code_files.Flux_wavelength.flux_model_interp" title="Link to this definition"></a></dt>
+<dd><p>Interpolates the flux of TRAPPIST-1 at a given wavelength from the SPHINX or PHOENIX model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>l</strong> (<em>float</em>) – the wavelength (in m)</p></li>
+<li><p><strong>model</strong> (<em>str</em>) – the model to use: ‘sphinx’ or ‘phoenix’ (default: ‘sphinx’)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>F</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Code_files.Flux_wavelength.Planck_law">
+<span class="sig-prename descclassname"><span class="pre">Code_files.Flux_wavelength.</span></span><span class="sig-name descname"><span class="pre">Planck_law</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wavelength</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">T</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Code_files.Flux_wavelength.Planck_law" title="Link to this definition"></a></dt>
+<dd><p>Determines the spectral radiance of a black body (in W/m^2 m^-1 sr^-1).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>wavelength</strong> (<em>float</em>) – the wavelength (in m)</p></li>
+<li><p><strong>T</strong> (<em>float</em>) – the temperature (in K)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>B</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Code_files.Flux_wavelength.flux_black_body">
+<span class="sig-prename descclassname"><span class="pre">Code_files.Flux_wavelength.</span></span><span class="sig-name descname"><span class="pre">flux_black_body</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lambda_min</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lambda_max</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">T</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Code_files.Flux_wavelength.flux_black_body" title="Link to this definition"></a></dt>
+<dd><p>Determines the flux of a black body (in W/m^2) over a range of wavelentgths.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>lambda_min</strong> (<em>float</em>) – the minimum wavelength (in m)</p></li>
+<li><p><strong>lambda_max</strong> (<em>float</em>) – the maximum wavelength (in m)</p></li>
+<li><p><strong>T</strong> (<em>float</em>) – the temperature (in K)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>F</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Code_files.Flux_wavelength.planet_equilibirium_temperature">
+<span class="sig-prename descclassname"><span class="pre">Code_files.Flux_wavelength.</span></span><span class="sig-name descname"><span class="pre">planet_equilibirium_temperature</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">T_star</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">R_star</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">d</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">albedo</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">redistribution</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Code_files.Flux_wavelength.planet_equilibirium_temperature" title="Link to this definition"></a></dt>
+<dd><p>Determines the equilibrium temperature of the day side of a tidally locked planet (in K).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>T_star</strong> (<em>float</em>) – the effective temperature of the star (in K)</p></li>
+<li><p><strong>R_star</strong> (<em>float</em>) – the radius of the star (in m)</p></li>
+<li><p><strong>d</strong> (<em>float</em>) – the distance between the star and the planet (in m)</p></li>
+<li><p><strong>albedo</strong> (<em>float</em>) – the albedo of the planet (default: 0)</p></li>
+<li><p><strong>redistribution</strong> (<em>float</em>) – the redistribution efficiency between the day side and night side (default: 0)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>T_eq</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Code_files.Flux_wavelength.flux_ratio_black_body">
+<span class="sig-prename descclassname"><span class="pre">Code_files.Flux_wavelength.</span></span><span class="sig-name descname"><span class="pre">flux_ratio_black_body</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">R_planet</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">R_star</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">T_star</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">d</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lambda_min</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lambda_max</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Code_files.Flux_wavelength.flux_ratio_black_body" title="Link to this definition"></a></dt>
+<dd><p>Determines the flux ratio between the planet and the star as black bodies(in ppm).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>F_planet</strong> (<em>float</em>) – the flux of the planet (in W/m^2)</p></li>
+<li><p><strong>F_star</strong> (<em>float</em>) – the flux of the star (in W/m^2)</p></li>
+<li><p><strong>R_planet</strong> (<em>float</em>) – the radius of the planet (in m)</p></li>
+<li><p><strong>R_star</strong> (<em>float</em>) – the radius of the star (in m)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>F_ratio</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Code_files.Flux_wavelength.conversion_IS_to_mJy">
+<span class="sig-prename descclassname"><span class="pre">Code_files.Flux_wavelength.</span></span><span class="sig-name descname"><span class="pre">conversion_IS_to_mJy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">F</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wavelength</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dist</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">R</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Code_files.Flux_wavelength.conversion_IS_to_mJy" title="Link to this definition"></a></dt>
+<dd><p>Converts the flux density (in W/m^2/m) to mJy.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>F</strong> (<em>float</em>) – the flux density (in W/m^2/m)</p></li>
+<li><p><strong>wavelength</strong> (<em>float</em>) – the wavelength (in m)</p></li>
+<li><p><strong>dist</strong> (<em>float</em>) – the distance of the object (in m)</p></li>
+<li><p><strong>R</strong> (<em>float</em>) – the radius of the object (in m)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>F_mJy</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Code_files.Flux_wavelength.flux_mJy">
+<span class="sig-prename descclassname"><span class="pre">Code_files.Flux_wavelength.</span></span><span class="sig-name descname"><span class="pre">flux_mJy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">F</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lambda_min</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lambda_max</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dist</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">R</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Code_files.Flux_wavelength.flux_mJy" title="Link to this definition"></a></dt>
+<dd><p>Compute the flux of an object in mJy over a range of wavelengths.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>F</strong> (<em>float</em>) – the flux density (in W/m^2/m)</p></li>
+<li><p><strong>lambda_min</strong> (<em>float</em>) – the minimum wavelength (in m)</p></li>
+<li><p><strong>lambda_max</strong> (<em>float</em>) – the maximum wavelength (in m)</p></li>
+<li><p><strong>dist</strong> (<em>float</em>) – the distance of the object (in m)</p></li>
+<li><p><strong>R</strong> (<em>float</em>) – the radius of the object (in m)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>F_mJy</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Code_files.Flux_wavelength.flux_mJy_array">
+<span class="sig-prename descclassname"><span class="pre">Code_files.Flux_wavelength.</span></span><span class="sig-name descname"><span class="pre">flux_mJy_array</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">F_array</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lambda_vals</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lambda_min</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lambda_max</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dist</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">R</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Code_files.Flux_wavelength.flux_mJy_array" title="Link to this definition"></a></dt>
+<dd><p>Compute the integrated flux of an object in mJy over a given wavelength range.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>F_array</strong> (<em>array-like</em>) – Array of flux densities (in W/m^2/m)</p></li>
+<li><p><strong>lambda_vals</strong> (<em>array-like</em>) – Corresponding wavelengths for F_array (in m)</p></li>
+<li><p><strong>lambda_min</strong> (<em>float</em>) – Minimum wavelength for integration (in m)</p></li>
+<li><p><strong>lambda_max</strong> (<em>float</em>) – Maximum wavelength for integration (in m)</p></li>
+<li><p><strong>dist</strong> (<em>float</em>) – Distance to the object (in m)</p></li>
+<li><p><strong>R</strong> (<em>float</em>) – Radius of the object (in m)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Integrated flux in mJy</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Code_files.Flux_wavelength.conversion_mJy_to_IS">
+<span class="sig-prename descclassname"><span class="pre">Code_files.Flux_wavelength.</span></span><span class="sig-name descname"><span class="pre">conversion_mJy_to_IS</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">F_mJy</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wavelength</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dist</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">R</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Code_files.Flux_wavelength.conversion_mJy_to_IS" title="Link to this definition"></a></dt>
+<dd><p>Converts the flux density (in mJy) to W/m^2/m.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>F_mJy</strong> (<em>float</em>) – the flux density (in mJy)</p></li>
+<li><p><strong>wavelength</strong> (<em>float</em>) – the wavelength (in m)flux_T1_sphinx_cut <a href="#id1"><span class="problematic" id="id2">*</span></a>= QE</p></li>
+<li><p><strong>dist</strong> (<em>float</em>) – the distance of the object (in m)</p></li>
+<li><p><strong>R</strong> (<em>float</em>) – the radius of the object (in m)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>F</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Code_files.Flux_wavelength.flux_Wm2">
+<span class="sig-prename descclassname"><span class="pre">Code_files.Flux_wavelength.</span></span><span class="sig-name descname"><span class="pre">flux_Wm2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">F_mJy</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lambda_min</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lambda_max</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dist</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">R</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Code_files.Flux_wavelength.flux_Wm2" title="Link to this definition"></a></dt>
+<dd><p>Compute the flux of an object in W/m^2 over a range of wavelengths.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>F_mJy</strong> (<em>float</em>) – the flux density (in mJy)</p></li>
+<li><p><strong>lambda_min</strong> (<em>float</em>) – the minimum wavelength (in m)</p></li>
+<li><p><strong>lambda_max</strong> (<em>float</em>) – the maximum wavelength (in m)</p></li>
+<li><p><strong>dist</strong> (<em>float</em>) – the distance of the object (in m)</p></li>
+<li><p><strong>R</strong> (<em>float</em>) – the radius of the object (in m)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>F</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Code_files.Flux_wavelength.filter">
+<span class="sig-prename descclassname"><span class="pre">Code_files.Flux_wavelength.</span></span><span class="sig-name descname"><span class="pre">filter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filter_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Code_files.Flux_wavelength.filter" title="Link to this definition"></a></dt>
+<dd><p>Returns the filter band of the specified filter.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>filter_name</strong> (<em>str</em>) – the name of the filter</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>filter_band</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Code_files.Flux_wavelength.quantum_efficiency">
+<span class="sig-prename descclassname"><span class="pre">Code_files.Flux_wavelength.</span></span><span class="sig-name descname"><span class="pre">quantum_efficiency</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filter_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wavelength</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Code_files.Flux_wavelength.quantum_efficiency" title="Link to this definition"></a></dt>
+<dd><p>Returns the quantum efficiency of the specified filter at the given wavelength.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filter_name</strong> (<em>str</em>) – the name of the filter</p></li>
+<li><p><strong>wavelength</strong> (<em>float</em>) – the wavelength (in m)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>QE</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Code_files.Flux_wavelength.flux_star_miri">
+<span class="sig-prename descclassname"><span class="pre">Code_files.Flux_wavelength.</span></span><span class="sig-name descname"><span class="pre">flux_star_miri</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filter_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Code_files.Flux_wavelength.flux_star_miri" title="Link to this definition"></a></dt>
+<dd><p>Returns the flux of the star TRAPPIST-1 in the specified MIRI filter band using the SPHINX model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>filter_name</strong> (<em>str</em>) – the name of the filter</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>F_star</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Code_files.Flux_wavelength.flux_planet_miri">
+<span class="sig-prename descclassname"><span class="pre">Code_files.Flux_wavelength.</span></span><span class="sig-name descname"><span class="pre">flux_planet_miri</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filter_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">T_planet</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Code_files.Flux_wavelength.flux_planet_miri" title="Link to this definition"></a></dt>
+<dd><p>Returns the flux of the planet in the specified MIRI filter band.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filter_name</strong> (<em>str</em>) – the name of the filter</p></li>
+<li><p><strong>T_planet</strong> (<em>float</em>) – the temperature of the planet (in K)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>F_planet_miri</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Code_files.Flux_wavelength.flux_ratio_miri">
+<span class="sig-prename descclassname"><span class="pre">Code_files.Flux_wavelength.</span></span><span class="sig-name descname"><span class="pre">flux_ratio_miri</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filter_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">R_planet</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">R_star</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">T_planet</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Code_files.Flux_wavelength.flux_ratio_miri" title="Link to this definition"></a></dt>
+<dd><p>Returns the flux ratio between the planet and the star in the specified MIRI filter band (in ppm).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filter_name</strong> (<em>str</em>) – the name of the filter</p></li>
+<li><p><strong>R_planet</strong> (<em>float</em>) – the radius of the planet (in m)</p></li>
+<li><p><strong>R_star</strong> (<em>float</em>) – the radius of the star (in m)</p></li>
+<li><p><strong>T_planet</strong> (<em>float</em>) – the temperature of the planet (in K)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>F_ratio_miri</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Code_files.Flux_wavelength.integrate_flux_model_mJy">
+<span class="sig-prename descclassname"><span class="pre">Code_files.Flux_wavelength.</span></span><span class="sig-name descname"><span class="pre">integrate_flux_model_mJy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filter_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'sphinx'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Code_files.Flux_wavelength.integrate_flux_model_mJy" title="Link to this definition"></a></dt>
+<dd><p>Integrates the flux (in mJy) of the SPHINX or PHOENIX model over the specified MIRI filter band.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filter_name</strong> (<em>str</em>) – the name of the filter</p></li>
+<li><p><strong>model</strong> (<em>str</em>) – the model to use: ‘sphinx’ or ‘phoenix’ (default: ‘sphinx’)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>F_miri</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Code_files.Flux_wavelength.main">
+<span class="sig-prename descclassname"><span class="pre">Code_files.Flux_wavelength.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Code_files.Flux_wavelength.main" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-Code_files.JWST_Obs_plot">
+<span id="code-files-jwst-obs-plot-module"></span><h2>Code_files.JWST_Obs_plot module<a class="headerlink" href="#module-Code_files.JWST_Obs_plot" title="Link to this heading"></a></h2>
+</section>
+<section id="module-Code_files.JWST_Obs_simu">
+<span id="code-files-jwst-obs-simu-module"></span><h2>Code_files.JWST_Obs_simu module<a class="headerlink" href="#module-Code_files.JWST_Obs_simu" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="Code_files.JWST_Obs_simu.phase_curve_visit">
+<span class="sig-prename descclassname"><span class="pre">Code_files.JWST_Obs_simu.</span></span><span class="sig-name descname"><span class="pre">phase_curve_visit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">planets</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">redistribution</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filter</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nb_points</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Keplerian</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Code_files.JWST_Obs_simu.phase_curve_visit" title="Link to this definition"></a></dt>
+<dd><p>Simulates the phase curves of the TRAPPIST-1 planets during JWST visits.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>planets</strong> (<em>str</em>) – the planets to simulate</p></li>
+<li><p><strong>redistribution</strong> (<em>float</em>) – the redistribution efficiency between the day side and night side (default: 0)</p></li>
+<li><p><strong>filter</strong> (<em>str</em>) – the MIRI filter to use</p></li>
+<li><p><strong>model</strong> (<em>str</em>) – the model to use for the stellar flux. If ‘sphinx’, the flux is computed using the SPHINX model. If ‘phoenix’, the flux is computed using the PHOENIX model.</p></li>
+<li><p><strong>unit</strong> (<em>str</em>) – the unit of the phase curve. If ‘ppm’, the fluxes of the planets will be computed relatively to the stellar flux in ppm. If ‘mJy’, the planetary fluxes will be computed in absolute value in “mJy”. Will be set automatically to ‘mJy’ if the model is ‘phoenix’.</p></li>
+<li><p><strong>nb_points</strong> (<em>int</em>) – the number of points for the phase curves (default: 10000)</p></li>
+<li><p><strong>Keplerian</strong> (<em>bool</em>) – whether to use the Keplerian periods or not (default: True)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-Code_files.MIRI_filter">
+<span id="code-files-miri-filter-module"></span><h2>Code_files.MIRI_filter module<a class="headerlink" href="#module-Code_files.MIRI_filter" title="Link to this heading"></a></h2>
+<p>This module is to plot MIRI filters’ quantum efficiency.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="Code_files.MIRI_filter.plot_filters">
+<span class="sig-prename descclassname"><span class="pre">Code_files.MIRI_filter.</span></span><span class="sig-name descname"><span class="pre">plot_filters</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Code_files.MIRI_filter.plot_filters" title="Link to this definition"></a></dt>
+<dd><p>Load MIRI filter data from CSV and plot the quantum efficiency curves for F1280W and F1500W filters.
+The plot is saved as ‘MIRI_filters.png’ and also displayed.</p>
+</dd></dl>
+
+</section>
+<section id="module-Code_files.Orbital_motion">
+<span id="code-files-orbital-motion-module"></span><h2>Code_files.Orbital_motion module<a class="headerlink" href="#module-Code_files.Orbital_motion" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="Code_files.Orbital_motion.kepler_equation">
+<span class="sig-prename descclassname"><span class="pre">Code_files.Orbital_motion.</span></span><span class="sig-name descname"><span class="pre">kepler_equation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">E</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">M</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">e</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Code_files.Orbital_motion.kepler_equation" title="Link to this definition"></a></dt>
+<dd><p>Returns the Kepler equation: M = E - e sin(E)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>E</strong> (<em>float</em>) – the eccentric anomaly</p></li>
+<li><p><strong>M</strong> (<em>float</em>) – the mean anomaly</p></li>
+<li><p><strong>e</strong> (<em>float</em>) – the eccentricity</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>E - e*np.sin(E) - M</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Code_files.Orbital_motion.solve_kepler">
+<span class="sig-prename descclassname"><span class="pre">Code_files.Orbital_motion.</span></span><span class="sig-name descname"><span class="pre">solve_kepler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">M</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">e</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Code_files.Orbital_motion.solve_kepler" title="Link to this definition"></a></dt>
+<dd><p>Solve the Kepler equation to find the eccentric anomaly E.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>E</strong> (<em>float</em>) – the eccentric anomaly</p></li>
+<li><p><strong>M</strong> (<em>float</em>) – the mean anomaly</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>E</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Code_files.Orbital_motion.true_anomaly">
+<span class="sig-prename descclassname"><span class="pre">Code_files.Orbital_motion.</span></span><span class="sig-name descname"><span class="pre">true_anomaly</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">E</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">e</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Code_files.Orbital_motion.true_anomaly" title="Link to this definition"></a></dt>
+<dd><p>Computes the true anomaly from the eccentric anomaly and the eccentricity.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>E</strong> (<em>float</em>) – the eccentric anomaly</p></li>
+<li><p><strong>e</strong> (<em>float</em>) – the eccentricity</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>nu</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Code_files.Orbital_motion.compute_true_anomaly">
+<span class="sig-prename descclassname"><span class="pre">Code_files.Orbital_motion.</span></span><span class="sig-name descname"><span class="pre">compute_true_anomaly</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nu_0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">e</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">T</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t_0</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Code_files.Orbital_motion.compute_true_anomaly" title="Link to this definition"></a></dt>
+<dd><p>Computes the true anomaly with respect to time.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>nu_0</strong> (<em>float</em>) – the initial true anomaly (in rad)</p></li>
+<li><p><strong>e</strong> (<em>float</em>) – the eccentricity</p></li>
+<li><p><strong>T</strong> (<em>float</em>) – the orbital period</p></li>
+<li><p><strong>t</strong> (<em>float</em>) – the time passed</p></li>
+<li><p><strong>t_0</strong> (<em>float</em>) – the initial time (default value: 0)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>nu_t</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Code_files.Orbital_motion.main">
+<span class="sig-prename descclassname"><span class="pre">Code_files.Orbital_motion.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Code_files.Orbital_motion.main" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-Code_files.Phase_curve_TTV">
+<span id="code-files-phase-curve-ttv-module"></span><h2>Code_files.Phase_curve_TTV module<a class="headerlink" href="#module-Code_files.Phase_curve_TTV" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="Code_files.Phase_curve_TTV.phase_TTV">
+<span class="sig-prename descclassname"><span class="pre">Code_files.Phase_curve_TTV.</span></span><span class="sig-name descname"><span class="pre">phase_TTV</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">P_TTV</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t_end</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transit_peaks</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nb_points</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Code_files.Phase_curve_TTV.phase_TTV" title="Link to this definition"></a></dt>
+<dd><p>Computes the phase of the planet taking into account the modification of the period due to TTVs starting from the nearest transit peak from t0</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>P_TTV</strong> (<em>numpy.ndarray</em>) – the modified orbital periods of the planet due to the TTVs (in days)</p></li>
+<li><p><strong>t0</strong> (<em>float</em>) – the initial time (in BJD_TBD - 2450000)</p></li>
+<li><p><strong>t_end</strong> (<em>float</em>) – the final time (in BJD_TBD - 2450000)</p></li>
+<li><p><strong>transit_peaks</strong> (<em>numpy.ndarray</em>) – the peaks of the transits (in BJD_TBD - 2450000)</p></li>
+<li><p><strong>nb_points</strong> (<em>int</em>) – the number of points for the phase curve</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>phases_TTV, t</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy.ndarray, numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Code_files.Phase_curve_TTV.phase_curve_simulation">
+<span class="sig-prename descclassname"><span class="pre">Code_files.Phase_curve_TTV.</span></span><span class="sig-name descname"><span class="pre">phase_curve_simulation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nb_days</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nb_points</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">planets</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'bcdefgh'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">redistribution</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'sphinx'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'ppm'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Keplerian</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">total</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_plot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_txt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Code_files.Phase_curve_TTV.phase_curve_simulation" title="Link to this definition"></a></dt>
+<dd><p>Simulates the phase curves of the planets of TRAPPIST-1 for a given number of days starting from t0 taking into account the modified periods due to TTVs.
+We assume circular orbits as otherwise the code does not manage to solve the Kepler equation to compute the true anomaly due to the modified periods.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>t0</strong> (<em>float</em>) – the initial time (in BJD_TBD - 2450000)</p></li>
+<li><p><strong>nb_days</strong> (<em>int</em>) – the number of days to simulate</p></li>
+<li><p><strong>nb_points</strong> (<em>int</em>) – the number of points for the phase curves (default: 10000)</p></li>
+<li><p><strong>planets</strong> (<em>str</em>) – the planets to simulate (default: ‘bcdefgh’)</p></li>
+<li><p><strong>redistribution</strong> (<em>float</em>) – the redistribution efficiency between the day side and night side (default: 0)</p></li>
+<li><p><strong>filter</strong> (<em>str</em><em> or </em><em>None</em>) – the filter to use (default: None). If None, the bolometric fluxes, expressed in ppm, are used relatively to the stellar flux with the planets considered as bare rocks.</p></li>
+<li><p><strong>model</strong> (<em>str</em>) – the model to use for the stellar flux (default: ‘sphinx’). If ‘sphinx’, the flux is computed using the SPHINX model. If ‘phoenix’, the flux is computed using the PHOENIX model.</p></li>
+<li><p><strong>unit</strong> (<em>str</em>) – the unit of the phase curve (default: ‘ppm’). If ‘ppm’, the fluxes of the planets will be computed relatively to the stellar flux in ppm. If ‘mJy’, the planetary fluxes will be computed in absolute value in “mJy”. Will be set automatically to ‘mJy’ if the model is ‘phoenix’.</p></li>
+<li><p><strong>Keplerian</strong> (<em>bool</em>) – whether to use the Keplerian periods or not (default: False)</p></li>
+<li><p><strong>total</strong> (<em>bool</em>) – whether to plot the total phase curve or not (default: True)</p></li>
+<li><p><strong>plot</strong> (<em>bool</em>) – whether to plot the phase curves or not (default: True)</p></li>
+<li><p><strong>save_plot</strong> (<em>bool</em>) – whether to save the plot or not (default: False)</p></li>
+<li><p><strong>save_txt</strong> (<em>bool</em>) – whether to save the phase curves as txt files or not (default: False)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Code_files.Phase_curve_TTV.main">
+<span class="sig-prename descclassname"><span class="pre">Code_files.Phase_curve_TTV.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Code_files.Phase_curve_TTV.main" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-Code_files.Phase_curve_v1">
+<span id="code-files-phase-curve-v1-module"></span><h2>Code_files.Phase_curve_v1 module<a class="headerlink" href="#module-Code_files.Phase_curve_v1" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="Code_files.Phase_curve_v1.phase_angle">
+<span class="sig-prename descclassname"><span class="pre">Code_files.Phase_curve_v1.</span></span><span class="sig-name descname"><span class="pre">phase_angle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">omega</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">i</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Code_files.Phase_curve_v1.phase_angle" title="Link to this definition"></a></dt>
+<dd><p>Determines the phase angle of a planet from its orbital parameters (in rad).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>omega</strong> (<em>float</em>) – the argument of pericentre (in rad)</p></li>
+<li><p><strong>nu</strong> (<em>float</em>) – the true anomaly (in rad)</p></li>
+<li><p><strong>i</strong> (<em>float</em>) – the inclination (in rad)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>alpha</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Code_files.Phase_curve_v1.phase_function">
+<span class="sig-prename descclassname"><span class="pre">Code_files.Phase_curve_v1.</span></span><span class="sig-name descname"><span class="pre">phase_function</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">alpha</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Code_files.Phase_curve_v1.phase_function" title="Link to this definition"></a></dt>
+<dd><p>Determines the phase function of a Lambert sphere.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>alpha</strong> (<em>float</em>) – the phase angle (in rad)</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>g</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Code_files.Phase_curve_v1.phase_planet">
+<span class="sig-prename descclassname"><span class="pre">Code_files.Phase_curve_v1.</span></span><span class="sig-name descname"><span class="pre">phase_planet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">P</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t0</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Code_files.Phase_curve_v1.phase_planet" title="Link to this definition"></a></dt>
+<dd><p>Determines the phase of a planet at a given time.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>t</strong> (<em>float</em>) – the time (in days)</p></li>
+<li><p><strong>P</strong> (<em>float</em>) – the orbital period (in days)</p></li>
+<li><p><strong>t0</strong> (<em>float</em>) – the reference time (in days)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>phase</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Code_files.Phase_curve_v1.star_planet_separation">
+<span class="sig-prename descclassname"><span class="pre">Code_files.Phase_curve_v1.</span></span><span class="sig-name descname"><span class="pre">star_planet_separation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">e</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nu</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Code_files.Phase_curve_v1.star_planet_separation" title="Link to this definition"></a></dt>
+<dd><p>Determines the distance between a planet and its star using its orbital parameters.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>a</strong> (<em>float</em>) – the semimajor axis (in m)</p></li>
+<li><p><strong>e</strong> (<em>float</em>) – the eccentricity</p></li>
+<li><p><strong>nu</strong> (<em>float</em>) – the true anomaly (in rad)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>r</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Code_files.Phase_curve_v1.flux_star">
+<span class="sig-prename descclassname"><span class="pre">Code_files.Phase_curve_v1.</span></span><span class="sig-name descname"><span class="pre">flux_star</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">L</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">d</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Code_files.Phase_curve_v1.flux_star" title="Link to this definition"></a></dt>
+<dd><p>Determines the flux received from a star (in W/m^2) at a distance d.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>L</strong> (<em>float</em>) – the star luminosity (in W)</p></li>
+<li><p><strong>d</strong> (<em>float</em>) – the distance (in m)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>F</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Code_files.Phase_curve_v1.flux_planet">
+<span class="sig-prename descclassname"><span class="pre">Code_files.Phase_curve_v1.</span></span><span class="sig-name descname"><span class="pre">flux_planet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">F_star</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Code_files.Phase_curve_v1.flux_planet" title="Link to this definition"></a></dt>
+<dd><p>Determines the flux reemitted by a planet (in W/m^2) from the one it receives from its star considering the planet is a black body.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>F_star</strong> (<em>float</em>) – the flux received by the planet from its star (in W/m^2)</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>F_planet</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Code_files.Phase_curve_v1.surface_sphere">
+<span class="sig-prename descclassname"><span class="pre">Code_files.Phase_curve_v1.</span></span><span class="sig-name descname"><span class="pre">surface_sphere</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">R</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Code_files.Phase_curve_v1.surface_sphere" title="Link to this definition"></a></dt>
+<dd><p>Determines the surface of a sphere of radius R.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>R</strong> (<em>float</em>) – the radius (in m)</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>S</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Code_files.Phase_curve_v1.luminosity_planet_dayside">
+<span class="sig-prename descclassname"><span class="pre">Code_files.Phase_curve_v1.</span></span><span class="sig-name descname"><span class="pre">luminosity_planet_dayside</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">F_planet</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">R_planet</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Code_files.Phase_curve_v1.luminosity_planet_dayside" title="Link to this definition"></a></dt>
+<dd><p>Determines the luminosity of the dayside of a planet from the flux it reemits and its radius.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>F_planet</strong> (<em>float</em>) – the flux reemitted by the planet’s dayside (in W/m^2)</p></li>
+<li><p><strong>R_planet</strong> (<em>float</em>) – the planet radius (in m)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>L_planet</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Code_files.Phase_curve_v1.phase_curve">
+<span class="sig-prename descclassname"><span class="pre">Code_files.Phase_curve_v1.</span></span><span class="sig-name descname"><span class="pre">phase_curve</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">L_star</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">L_planet</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">R_star</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">R_planet</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phase_planet</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eclipse</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Code_files.Phase_curve_v1.phase_curve" title="Link to this definition"></a></dt>
+<dd><p>Determines the phase curve of a planet from its luminosity, its star’s luminosity and its phase function expressed as the ratio between the planet and star’s luminosities in ppm.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>L_star</strong> (<em>float</em>) – the star luminosity (in W)</p></li>
+<li><p><strong>L_planet</strong> (<em>float</em>) – the planet luminosity (in W)</p></li>
+<li><p><strong>R_star</strong> (<em>float</em>) – the star radius (in m)</p></li>
+<li><p><strong>R_planet</strong> (<em>float</em>) – the planet radius (in m)</p></li>
+<li><p><strong>phase_planet</strong> (<em>float</em>) – the phase function of the planet</p></li>
+<li><p><strong>eclipse</strong> (<em>bool</em>) – True if the planet is in eclipse, False otherwise</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>curve</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Code_files.Phase_curve_v1.main">
+<span class="sig-prename descclassname"><span class="pre">Code_files.Phase_curve_v1.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Code_files.Phase_curve_v1.main" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="code-files-phase-curves-comparison-module">
+<h2>Code_files.Phase_curves_comparison module<a class="headerlink" href="#code-files-phase-curves-comparison-module" title="Link to this heading"></a></h2>
+</section>
+<section id="module-Code_files.Phoenix">
+<span id="code-files-phoenix-module"></span><h2>Code_files.Phoenix module<a class="headerlink" href="#module-Code_files.Phoenix" title="Link to this heading"></a></h2>
+<p>PHOENIX Spectrum Generation for star TRAPPIST-1 using pysynphot</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="Code_files.Phoenix.Teff">
+<span class="sig-prename descclassname"><span class="pre">Code_files.Phoenix.</span></span><span class="sig-name descname"><span class="pre">Teff</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2566</span></em><a class="headerlink" href="#Code_files.Phoenix.Teff" title="Link to this definition"></a></dt>
+<dd><p>Teff = 2566 +/- 26 K from Agol et al. 2021</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Code_files.Phoenix.Rs">
+<span class="sig-prename descclassname"><span class="pre">Code_files.Phoenix.</span></span><span class="sig-name descname"><span class="pre">Rs</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">8292744000.0</span></em><a class="headerlink" href="#Code_files.Phoenix.Rs" title="Link to this definition"></a></dt>
+<dd><p>Stellar radius planet from Agol et al. 2021 in cm</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Code_files.Phoenix.Ms">
+<span class="sig-prename descclassname"><span class="pre">Code_files.Phoenix.</span></span><span class="sig-name descname"><span class="pre">Ms</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1.5959799999999999e+32</span></em><a class="headerlink" href="#Code_files.Phoenix.Ms" title="Link to this definition"></a></dt>
+<dd><p>Stellar mass in g</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Code_files.Phoenix.logg">
+<span class="sig-prename descclassname"><span class="pre">Code_files.Phoenix.</span></span><span class="sig-name descname"><span class="pre">logg</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">5.189952052020907</span></em><a class="headerlink" href="#Code_files.Phoenix.logg" title="Link to this definition"></a></dt>
+<dd><p>cgs</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Code_files.Phoenix.dist">
+<span class="sig-prename descclassname"><span class="pre">Code_files.Phoenix.</span></span><span class="sig-name descname"><span class="pre">dist</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3.8473162e+19</span></em><a class="headerlink" href="#Code_files.Phoenix.dist" title="Link to this definition"></a></dt>
+<dd><p>stellar distance in pc, converted to cm</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Code_files.Phoenix.Rp">
+<span class="sig-prename descclassname"><span class="pre">Code_files.Phoenix.</span></span><span class="sig-name descname"><span class="pre">Rp</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">711784800.0000001</span></em><a class="headerlink" href="#Code_files.Phoenix.Rp" title="Link to this definition"></a></dt>
+<dd><p>cm b planet from Agol et al. 2021</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Code_files.Phoenix.a">
+<span class="sig-prename descclassname"><span class="pre">Code_files.Phoenix.</span></span><span class="sig-name descname"><span class="pre">a</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">172638400000.0</span></em><a class="headerlink" href="#Code_files.Phoenix.a" title="Link to this definition"></a></dt>
+<dd><p>cm b planet from Agol et al. 2021</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Code_files.Phoenix.e">
+<span class="sig-prename descclassname"><span class="pre">Code_files.Phoenix.</span></span><span class="sig-name descname"><span class="pre">e</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0.001</span></em><a class="headerlink" href="#Code_files.Phoenix.e" title="Link to this definition"></a></dt>
+<dd><p>Wang et al. 2017 K2 (Note Luger et al. 2017 K2 data give e = 0.001)</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Code_files.Phoenix.T14">
+<span class="sig-prename descclassname"><span class="pre">Code_files.Phoenix.</span></span><span class="sig-name descname"><span class="pre">T14</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1944.0000000000002</span></em><a class="headerlink" href="#Code_files.Phoenix.T14" title="Link to this definition"></a></dt>
+<dd><p>transit duration (36 min x 0.9 eff)</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Code_files.Phoenix.P">
+<span class="sig-prename descclassname"><span class="pre">Code_files.Phoenix.</span></span><span class="sig-name descname"><span class="pre">P</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1.510826</span></em><a class="headerlink" href="#Code_files.Phoenix.P" title="Link to this definition"></a></dt>
+<dd><p>days orbital period b planet from Agol et al. 2021</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Code_files.Phoenix.generate_phoenix_model">
+<span class="sig-prename descclassname"><span class="pre">Code_files.Phoenix.</span></span><span class="sig-name descname"><span class="pre">generate_phoenix_model</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Code_files.Phoenix.generate_phoenix_model" title="Link to this definition"></a></dt>
+<dd><p>Generate and save the PHOENIX model spectrum for TRAPPIST-1 using pysynphot.</p>
+<ul class="simple">
+<li><p>Creates a PHOENIX stellar model for TRAPPIST-1 with specified parameters.</p></li>
+<li><p>Normalizes the model to the observed J-band magnitude.</p></li>
+<li><p>Converts the spectrum to wavelength in microns and flux in mJy (for JWST ETC).</p></li>
+<li><p>Saves the spectrum to ‘TRAPPIST1_Phoenix_model.txt’.</p></li>
+<li><p>Plots the spectrum between 10 and 20 microns.</p></li>
+</ul>
+</dd></dl>
+
+</section>
+<section id="module-Code_files.Solar_System_constants">
+<span id="code-files-solar-system-constants-module"></span><h2>Code_files.Solar_System_constants module<a class="headerlink" href="#module-Code_files.Solar_System_constants" title="Link to this heading"></a></h2>
+<p>This module contains some constants from Solar System bodies commonly used in exoplanetology.</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="Code_files.Solar_System_constants.L_Sun">
+<span class="sig-prename descclassname"><span class="pre">Code_files.Solar_System_constants.</span></span><span class="sig-name descname"><span class="pre">L_Sun</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3.83e+26</span></em><a class="headerlink" href="#Code_files.Solar_System_constants.L_Sun" title="Link to this definition"></a></dt>
+<dd><p>Solar luminosity in watts (from Wikipedia)</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Code_files.Solar_System_constants.M_Sun">
+<span class="sig-prename descclassname"><span class="pre">Code_files.Solar_System_constants.</span></span><span class="sig-name descname"><span class="pre">M_Sun</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1.9885e+30</span></em><a class="headerlink" href="#Code_files.Solar_System_constants.M_Sun" title="Link to this definition"></a></dt>
+<dd><p>Solar mass in kilograms (from Wikipedia)</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Code_files.Solar_System_constants.R_Sun">
+<span class="sig-prename descclassname"><span class="pre">Code_files.Solar_System_constants.</span></span><span class="sig-name descname"><span class="pre">R_Sun</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">696342000.0</span></em><a class="headerlink" href="#Code_files.Solar_System_constants.R_Sun" title="Link to this definition"></a></dt>
+<dd><p>Solar equatorial radius in meters (from Wikipedia)</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Code_files.Solar_System_constants.M_Earth">
+<span class="sig-prename descclassname"><span class="pre">Code_files.Solar_System_constants.</span></span><span class="sig-name descname"><span class="pre">M_Earth</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">5.9722e+24</span></em><a class="headerlink" href="#Code_files.Solar_System_constants.M_Earth" title="Link to this definition"></a></dt>
+<dd><p>Earth mass in kilograms (from Wikipedia)</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Code_files.Solar_System_constants.R_Earth">
+<span class="sig-prename descclassname"><span class="pre">Code_files.Solar_System_constants.</span></span><span class="sig-name descname"><span class="pre">R_Earth</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">6378137.0</span></em><a class="headerlink" href="#Code_files.Solar_System_constants.R_Earth" title="Link to this definition"></a></dt>
+<dd><p>Earth equatorial radius in meters (from Wikipedia)</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Code_files.Solar_System_constants.M_Jupiter">
+<span class="sig-prename descclassname"><span class="pre">Code_files.Solar_System_constants.</span></span><span class="sig-name descname"><span class="pre">M_Jupiter</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1.8986e+27</span></em><a class="headerlink" href="#Code_files.Solar_System_constants.M_Jupiter" title="Link to this definition"></a></dt>
+<dd><p>Jupiter mass in kilograms (from Wikipedia)</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Code_files.Solar_System_constants.R_Jupiter">
+<span class="sig-prename descclassname"><span class="pre">Code_files.Solar_System_constants.</span></span><span class="sig-name descname"><span class="pre">R_Jupiter</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">71492000.0</span></em><a class="headerlink" href="#Code_files.Solar_System_constants.R_Jupiter" title="Link to this definition"></a></dt>
+<dd><p>Jupiter equatorial radius in meters (from Wikipedia)</p>
+</dd></dl>
+
+</section>
+<section id="module-Code_files.TRAPPIST1_parameters">
+<span id="code-files-trappist1-parameters-module"></span><h2>Code_files.TRAPPIST1_parameters module<a class="headerlink" href="#module-Code_files.TRAPPIST1_parameters" title="Link to this heading"></a></h2>
+<p>This module contains some parameters for the planets of the TRAPPIST-1 system.</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="Code_files.TRAPPIST1_parameters.dist_system">
+<span class="sig-prename descclassname"><span class="pre">Code_files.TRAPPIST1_parameters.</span></span><span class="sig-name descname"><span class="pre">dist_system</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3.8358636856984774e+17</span></em><a class="headerlink" href="#Code_files.TRAPPIST1_parameters.dist_system" title="Link to this definition"></a></dt>
+<dd><p>Distance between the TRAPPIST-1 system and the Solar system in meters (from NASA Exoplanet Archive)</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Code_files.TRAPPIST1_parameters.T_eff_star">
+<span class="sig-prename descclassname"><span class="pre">Code_files.TRAPPIST1_parameters.</span></span><span class="sig-name descname"><span class="pre">T_eff_star</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2566</span></em><a class="headerlink" href="#Code_files.TRAPPIST1_parameters.T_eff_star" title="Link to this definition"></a></dt>
+<dd><p>Effective temperature of star TRAPPIST-1 in Kelvin (Agol et al. 2021)</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Code_files.TRAPPIST1_parameters.R_star">
+<span class="sig-prename descclassname"><span class="pre">Code_files.TRAPPIST1_parameters.</span></span><span class="sig-name descname"><span class="pre">R_star</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">83003966.4</span></em><a class="headerlink" href="#Code_files.TRAPPIST1_parameters.R_star" title="Link to this definition"></a></dt>
+<dd><p>Radius of star TRAPPIST-1 in meters (Agol et al. 2021)</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Code_files.TRAPPIST1_parameters.M_star">
+<span class="sig-prename descclassname"><span class="pre">Code_files.TRAPPIST1_parameters.</span></span><span class="sig-name descname"><span class="pre">M_star</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1.785673e+29</span></em><a class="headerlink" href="#Code_files.TRAPPIST1_parameters.M_star" title="Link to this definition"></a></dt>
+<dd><p>Mass of star TRAPPIST-1 in kilograms (Ducrot et al. 2020)</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Code_files.TRAPPIST1_parameters.L_star">
+<span class="sig-prename descclassname"><span class="pre">Code_files.TRAPPIST1_parameters.</span></span><span class="sig-name descname"><span class="pre">L_star</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2.104741546874703e+23</span></em><a class="headerlink" href="#Code_files.TRAPPIST1_parameters.L_star" title="Link to this definition"></a></dt>
+<dd><p>Luminosity of star TRAPPIST-1 in Watts (Ducrot et al. 2020)</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Code_files.TRAPPIST1_parameters.wavelengths_T1_sphinx">
+<span class="sig-prename descclassname"><span class="pre">Code_files.TRAPPIST1_parameters.</span></span><span class="sig-name descname"><span class="pre">wavelengths_T1_sphinx</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">array([4.00000509e-07,</span> <span class="pre">4.00008509e-07,</span> <span class="pre">4.00016509e-07,</span> <span class="pre">...,</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">3.00285286e-05,</span> <span class="pre">3.00291291e-05,</span> <span class="pre">3.00297297e-05])</span></em><a class="headerlink" href="#Code_files.TRAPPIST1_parameters.wavelengths_T1_sphinx" title="Link to this definition"></a></dt>
+<dd><p>Wavelengths from the SPHINX model spectrum of star TRAPPIST-1 in meters</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Code_files.TRAPPIST1_parameters.flux_T1_sphinx">
+<span class="sig-prename descclassname"><span class="pre">Code_files.TRAPPIST1_parameters.</span></span><span class="sig-name descname"><span class="pre">flux_T1_sphinx</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">array([3.65209439e+10,</span> <span class="pre">4.45932637e+10,</span> <span class="pre">4.68980125e+10,</span> <span class="pre">...,</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">5.16422631e+07,</span> <span class="pre">5.08248774e+07,</span> <span class="pre">0.00000000e+00])</span></em><a class="headerlink" href="#Code_files.TRAPPIST1_parameters.flux_T1_sphinx" title="Link to this definition"></a></dt>
+<dd><p>Stellar flux of TRAPPIST-1 in W/m^2/m from the SPHINX spectrum model (corrected by 7% to better match observations)</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Code_files.TRAPPIST1_parameters.wavelengths_T1_phoenix">
+<span class="sig-prename descclassname"><span class="pre">Code_files.TRAPPIST1_parameters.</span></span><span class="sig-name descname"><span class="pre">wavelengths_T1_phoenix</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">array([1.25892541e-09,</span> <span class="pre">1.26021668e-09,</span> <span class="pre">1.26150927e-09,</span> <span class="pre">...,</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">7.76142810e-05,</span> <span class="pre">7.76194962e-05,</span> <span class="pre">7.76247117e-05])</span></em><a class="headerlink" href="#Code_files.TRAPPIST1_parameters.wavelengths_T1_phoenix" title="Link to this definition"></a></dt>
+<dd><p>Wavelengths from the PHOENIX model spectrum of star TRAPPIST-1 in meters</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Code_files.TRAPPIST1_parameters.flux_T1_phoenix_mJy">
+<span class="sig-prename descclassname"><span class="pre">Code_files.TRAPPIST1_parameters.</span></span><span class="sig-name descname"><span class="pre">flux_T1_phoenix_mJy</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">array([5.23820679e-107,</span> <span class="pre">5.24895784e-107,</span> <span class="pre">5.25973095e-107,</span> <span class="pre">...,</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">1.21781009e-001,</span> <span class="pre">1.16229755e-001,</span> <span class="pre">1.13663120e-001])</span></em><a class="headerlink" href="#Code_files.TRAPPIST1_parameters.flux_T1_phoenix_mJy" title="Link to this definition"></a></dt>
+<dd><p>Stellar flux of TRAPPIST-1 in mJy from the PHOENIX spectrum model</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Code_files.TRAPPIST1_parameters.a_b">
+<span class="sig-prename descclassname"><span class="pre">Code_files.TRAPPIST1_parameters.</span></span><span class="sig-name descname"><span class="pre">a_b</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1670869843.632</span></em><a class="headerlink" href="#Code_files.TRAPPIST1_parameters.a_b" title="Link to this definition"></a></dt>
+<dd><p>Semi-major axis of TRAPPIST-1 b in meters (Ducrot et al. 2020)</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Code_files.TRAPPIST1_parameters.P_b">
+<span class="sig-prename descclassname"><span class="pre">Code_files.TRAPPIST1_parameters.</span></span><span class="sig-name descname"><span class="pre">P_b</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1.51088432</span></em><a class="headerlink" href="#Code_files.TRAPPIST1_parameters.P_b" title="Link to this definition"></a></dt>
+<dd><p>Orbital period of TRAPPIST-1 b in days (Ducrot et al. 2020)</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Code_files.TRAPPIST1_parameters.i_b">
+<span class="sig-prename descclassname"><span class="pre">Code_files.TRAPPIST1_parameters.</span></span><span class="sig-name descname"><span class="pre">i_b</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1.5582299561805375</span></em><a class="headerlink" href="#Code_files.TRAPPIST1_parameters.i_b" title="Link to this definition"></a></dt>
+<dd><p>Orbital inclination of TRAPPIST-1 b in radians (Ducrot et al. 2020)</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Code_files.TRAPPIST1_parameters.omega_b">
+<span class="sig-prename descclassname"><span class="pre">Code_files.TRAPPIST1_parameters.</span></span><span class="sig-name descname"><span class="pre">omega_b</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">5.879316118268099</span></em><a class="headerlink" href="#Code_files.TRAPPIST1_parameters.omega_b" title="Link to this definition"></a></dt>
+<dd><p>Argument of periastron of TRAPPIST-1 b in radians (Grimm et al. 2018)</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Code_files.TRAPPIST1_parameters.e_b">
+<span class="sig-prename descclassname"><span class="pre">Code_files.TRAPPIST1_parameters.</span></span><span class="sig-name descname"><span class="pre">e_b</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0.00622</span></em><a class="headerlink" href="#Code_files.TRAPPIST1_parameters.e_b" title="Link to this definition"></a></dt>
+<dd><p>Orbital eccentricity of TRAPPIST-1 b (Grimm et al. 2018)</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Code_files.TRAPPIST1_parameters.R_b">
+<span class="sig-prename descclassname"><span class="pre">Code_files.TRAPPIST1_parameters.</span></span><span class="sig-name descname"><span class="pre">R_b</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">7118000.892000001</span></em><a class="headerlink" href="#Code_files.TRAPPIST1_parameters.R_b" title="Link to this definition"></a></dt>
+<dd><p>Radius of TRAPPIST-1 b in meters (Agol et al. 2021)</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Code_files.TRAPPIST1_parameters.a_c">
+<span class="sig-prename descclassname"><span class="pre">Code_files.TRAPPIST1_parameters.</span></span><span class="sig-name descname"><span class="pre">a_c</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2288419353.6480002</span></em><a class="headerlink" href="#Code_files.TRAPPIST1_parameters.a_c" title="Link to this definition"></a></dt>
+<dd><p>Semi-major axis of TRAPPIST-1 c in meters (Ducrot et al. 2020)</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Code_files.TRAPPIST1_parameters.P_c">
+<span class="sig-prename descclassname"><span class="pre">Code_files.TRAPPIST1_parameters.</span></span><span class="sig-name descname"><span class="pre">P_c</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2.42179346</span></em><a class="headerlink" href="#Code_files.TRAPPIST1_parameters.P_c" title="Link to this definition"></a></dt>
+<dd><p>Orbital period of TRAPPIST-1 c in days (Ducrot et al. 2020)</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Code_files.TRAPPIST1_parameters.i_c">
+<span class="sig-prename descclassname"><span class="pre">Code_files.TRAPPIST1_parameters.</span></span><span class="sig-name descname"><span class="pre">i_c</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1.5615460817593265</span></em><a class="headerlink" href="#Code_files.TRAPPIST1_parameters.i_c" title="Link to this definition"></a></dt>
+<dd><p>Orbital inclination of TRAPPIST-1 c in radians (Ducrot et al. 2020)</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Code_files.TRAPPIST1_parameters.omega_c">
+<span class="sig-prename descclassname"><span class="pre">Code_files.TRAPPIST1_parameters.</span></span><span class="sig-name descname"><span class="pre">omega_c</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">4.9296824722579835</span></em><a class="headerlink" href="#Code_files.TRAPPIST1_parameters.omega_c" title="Link to this definition"></a></dt>
+<dd><p>Argument of periastron of TRAPPIST-1 c in radians (Grimm et al. 2018)</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Code_files.TRAPPIST1_parameters.e_c">
+<span class="sig-prename descclassname"><span class="pre">Code_files.TRAPPIST1_parameters.</span></span><span class="sig-name descname"><span class="pre">e_c</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0.00654</span></em><a class="headerlink" href="#Code_files.TRAPPIST1_parameters.e_c" title="Link to this definition"></a></dt>
+<dd><p>Orbital eccentricity of TRAPPIST-1 c (Grimm et al. 2018)</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Code_files.TRAPPIST1_parameters.R_c">
+<span class="sig-prename descclassname"><span class="pre">Code_files.TRAPPIST1_parameters.</span></span><span class="sig-name descname"><span class="pre">R_c</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">6996816.289</span></em><a class="headerlink" href="#Code_files.TRAPPIST1_parameters.R_c" title="Link to this definition"></a></dt>
+<dd><p>Radius of TRAPPIST-1 c in meters (Agol et al. 2021)</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Code_files.TRAPPIST1_parameters.a_d">
+<span class="sig-prename descclassname"><span class="pre">Code_files.TRAPPIST1_parameters.</span></span><span class="sig-name descname"><span class="pre">a_d</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3224704094.6400003</span></em><a class="headerlink" href="#Code_files.TRAPPIST1_parameters.a_d" title="Link to this definition"></a></dt>
+<dd><p>Semi-major axis of TRAPPIST-1 d in meters (Ducrot et al. 2020)</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Code_files.TRAPPIST1_parameters.P_d">
+<span class="sig-prename descclassname"><span class="pre">Code_files.TRAPPIST1_parameters.</span></span><span class="sig-name descname"><span class="pre">P_d</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">4.04978035</span></em><a class="headerlink" href="#Code_files.TRAPPIST1_parameters.P_d" title="Link to this definition"></a></dt>
+<dd><p>Orbital period of TRAPPIST-1 d in days (Ducrot et al. 2020)</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Code_files.TRAPPIST1_parameters.i_d">
+<span class="sig-prename descclassname"><span class="pre">Code_files.TRAPPIST1_parameters.</span></span><span class="sig-name descname"><span class="pre">i_d</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1.5646876744129166</span></em><a class="headerlink" href="#Code_files.TRAPPIST1_parameters.i_d" title="Link to this definition"></a></dt>
+<dd><p>Orbital inclination of TRAPPIST-1 d in radians (Ducrot et al. 2020)</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Code_files.TRAPPIST1_parameters.omega_d">
+<span class="sig-prename descclassname"><span class="pre">Code_files.TRAPPIST1_parameters.</span></span><span class="sig-name descname"><span class="pre">omega_d</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">-0.15236724369910498</span></em><a class="headerlink" href="#Code_files.TRAPPIST1_parameters.omega_d" title="Link to this definition"></a></dt>
+<dd><p>Argument of periastron of TRAPPIST-1 d in radians (Grimm et al. 2018)</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Code_files.TRAPPIST1_parameters.e_d">
+<span class="sig-prename descclassname"><span class="pre">Code_files.TRAPPIST1_parameters.</span></span><span class="sig-name descname"><span class="pre">e_d</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0.00837</span></em><a class="headerlink" href="#Code_files.TRAPPIST1_parameters.e_d" title="Link to this definition"></a></dt>
+<dd><p>Orbital eccentricity of TRAPPIST-1 d (Grimm et al. 2018)</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Code_files.TRAPPIST1_parameters.R_d">
+<span class="sig-prename descclassname"><span class="pre">Code_files.TRAPPIST1_parameters.</span></span><span class="sig-name descname"><span class="pre">R_d</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">5025971.956</span></em><a class="headerlink" href="#Code_files.TRAPPIST1_parameters.R_d" title="Link to this definition"></a></dt>
+<dd><p>Radius of TRAPPIST-1 d in meters (Agol et al. 2021)</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Code_files.TRAPPIST1_parameters.a_e">
+<span class="sig-prename descclassname"><span class="pre">Code_files.TRAPPIST1_parameters.</span></span><span class="sig-name descname"><span class="pre">a_e</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">4233202286.4</span></em><a class="headerlink" href="#Code_files.TRAPPIST1_parameters.a_e" title="Link to this definition"></a></dt>
+<dd><p>Semi-major axis of TRAPPIST-1 e in meters (Ducrot et al. 2020)</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Code_files.TRAPPIST1_parameters.P_e">
+<span class="sig-prename descclassname"><span class="pre">Code_files.TRAPPIST1_parameters.</span></span><span class="sig-name descname"><span class="pre">P_e</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">6.09956479</span></em><a class="headerlink" href="#Code_files.TRAPPIST1_parameters.P_e" title="Link to this definition"></a></dt>
+<dd><p>Orbital period of TRAPPIST-1 e in days (Ducrot et al. 2020)</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Code_files.TRAPPIST1_parameters.i_e">
+<span class="sig-prename descclassname"><span class="pre">Code_files.TRAPPIST1_parameters.</span></span><span class="sig-name descname"><span class="pre">i_e</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1.5649145672156757</span></em><a class="headerlink" href="#Code_files.TRAPPIST1_parameters.i_e" title="Link to this definition"></a></dt>
+<dd><p>Orbital inclination of TRAPPIST-1 e in radians (Ducrot et al. 2020)</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Code_files.TRAPPIST1_parameters.omega_e">
+<span class="sig-prename descclassname"><span class="pre">Code_files.TRAPPIST1_parameters.</span></span><span class="sig-name descname"><span class="pre">omega_e</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1.891413310386255</span></em><a class="headerlink" href="#Code_files.TRAPPIST1_parameters.omega_e" title="Link to this definition"></a></dt>
+<dd><p>Argument of periastron of TRAPPIST-1 e in radians (Grimm et al. 2018)</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Code_files.TRAPPIST1_parameters.e_e">
+<span class="sig-prename descclassname"><span class="pre">Code_files.TRAPPIST1_parameters.</span></span><span class="sig-name descname"><span class="pre">e_e</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0.00051</span></em><a class="headerlink" href="#Code_files.TRAPPIST1_parameters.e_e" title="Link to this definition"></a></dt>
+<dd><p>Orbital eccentricity of TRAPPIST-1 e (Grimm et al. 2018)</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Code_files.TRAPPIST1_parameters.R_e">
+<span class="sig-prename descclassname"><span class="pre">Code_files.TRAPPIST1_parameters.</span></span><span class="sig-name descname"><span class="pre">R_e</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">5867886.04</span></em><a class="headerlink" href="#Code_files.TRAPPIST1_parameters.R_e" title="Link to this definition"></a></dt>
+<dd><p>Radius of TRAPPIST-1 e in meters (Agol et al. 2021)</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Code_files.TRAPPIST1_parameters.a_f">
+<span class="sig-prename descclassname"><span class="pre">Code_files.TRAPPIST1_parameters.</span></span><span class="sig-name descname"><span class="pre">a_f</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">5569566145.44</span></em><a class="headerlink" href="#Code_files.TRAPPIST1_parameters.a_f" title="Link to this definition"></a></dt>
+<dd><p>Semi-major axis of TRAPPIST-1 f in meters (Ducrot et al. 2020)</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Code_files.TRAPPIST1_parameters.P_f">
+<span class="sig-prename descclassname"><span class="pre">Code_files.TRAPPIST1_parameters.</span></span><span class="sig-name descname"><span class="pre">P_f</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">9.20659399</span></em><a class="headerlink" href="#Code_files.TRAPPIST1_parameters.P_f" title="Link to this definition"></a></dt>
+<dd><p>Orbital period of TRAPPIST-1 f in days (Ducrot et al. 2020)</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Code_files.TRAPPIST1_parameters.i_f">
+<span class="sig-prename descclassname"><span class="pre">Code_files.TRAPPIST1_parameters.</span></span><span class="sig-name descname"><span class="pre">i_f</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1.5649669270932354</span></em><a class="headerlink" href="#Code_files.TRAPPIST1_parameters.i_f" title="Link to this definition"></a></dt>
+<dd><p>Orbital inclination of TRAPPIST-1 f in radians (Ducrot et al. 2020)</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Code_files.TRAPPIST1_parameters.omega_f">
+<span class="sig-prename descclassname"><span class="pre">Code_files.TRAPPIST1_parameters.</span></span><span class="sig-name descname"><span class="pre">omega_f</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">6.436948814280287</span></em><a class="headerlink" href="#Code_files.TRAPPIST1_parameters.omega_f" title="Link to this definition"></a></dt>
+<dd><p>Argument of periastron of TRAPPIST-1 f in radians (Grimm et al. 2018)</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Code_files.TRAPPIST1_parameters.e_f">
+<span class="sig-prename descclassname"><span class="pre">Code_files.TRAPPIST1_parameters.</span></span><span class="sig-name descname"><span class="pre">e_f</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0.01007</span></em><a class="headerlink" href="#Code_files.TRAPPIST1_parameters.e_f" title="Link to this definition"></a></dt>
+<dd><p>Orbital eccentricity of TRAPPIST-1 f (Grimm et al. 2018)</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Code_files.TRAPPIST1_parameters.R_f">
+<span class="sig-prename descclassname"><span class="pre">Code_files.TRAPPIST1_parameters.</span></span><span class="sig-name descname"><span class="pre">R_f</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">6665153.164999999</span></em><a class="headerlink" href="#Code_files.TRAPPIST1_parameters.R_f" title="Link to this definition"></a></dt>
+<dd><p>Radius of TRAPPIST-1 f in meters (Agol et al. 2021)</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Code_files.TRAPPIST1_parameters.a_g">
+<span class="sig-prename descclassname"><span class="pre">Code_files.TRAPPIST1_parameters.</span></span><span class="sig-name descname"><span class="pre">a_g</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">6781424054.880001</span></em><a class="headerlink" href="#Code_files.TRAPPIST1_parameters.a_g" title="Link to this definition"></a></dt>
+<dd><p>Semi-major axis of TRAPPIST-1 g in meters (Ducrot et al. 2020)</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Code_files.TRAPPIST1_parameters.P_g">
+<span class="sig-prename descclassname"><span class="pre">Code_files.TRAPPIST1_parameters.</span></span><span class="sig-name descname"><span class="pre">P_g</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">12.3535557</span></em><a class="headerlink" href="#Code_files.TRAPPIST1_parameters.P_g" title="Link to this definition"></a></dt>
+<dd><p>Orbital period of TRAPPIST-1 g in days (Ducrot et al. 2020)</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Code_files.TRAPPIST1_parameters.i_g">
+<span class="sig-prename descclassname"><span class="pre">Code_files.TRAPPIST1_parameters.</span></span><span class="sig-name descname"><span class="pre">i_g</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1.5655254324538737</span></em><a class="headerlink" href="#Code_files.TRAPPIST1_parameters.i_g" title="Link to this definition"></a></dt>
+<dd><p>Orbital inclination of TRAPPIST-1 g in radians (Ducrot et al. 2020)</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Code_files.TRAPPIST1_parameters.omega_g">
+<span class="sig-prename descclassname"><span class="pre">Code_files.TRAPPIST1_parameters.</span></span><span class="sig-name descname"><span class="pre">omega_g</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3.33951299076595</span></em><a class="headerlink" href="#Code_files.TRAPPIST1_parameters.omega_g" title="Link to this definition"></a></dt>
+<dd><p>Argument of periastron of TRAPPIST-1 g in radians (Grimm et al. 2018)</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Code_files.TRAPPIST1_parameters.e_g">
+<span class="sig-prename descclassname"><span class="pre">Code_files.TRAPPIST1_parameters.</span></span><span class="sig-name descname"><span class="pre">e_g</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0.00208</span></em><a class="headerlink" href="#Code_files.TRAPPIST1_parameters.e_g" title="Link to this definition"></a></dt>
+<dd><p>Orbital eccentricity of TRAPPIST-1 g (Grimm et al. 2018)</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Code_files.TRAPPIST1_parameters.R_g">
+<span class="sig-prename descclassname"><span class="pre">Code_files.TRAPPIST1_parameters.</span></span><span class="sig-name descname"><span class="pre">R_g</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">7200916.673</span></em><a class="headerlink" href="#Code_files.TRAPPIST1_parameters.R_g" title="Link to this definition"></a></dt>
+<dd><p>Radius of TRAPPIST-1 g in meters (Agol et al. 2021)</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Code_files.TRAPPIST1_parameters.a_h">
+<span class="sig-prename descclassname"><span class="pre">Code_files.TRAPPIST1_parameters.</span></span><span class="sig-name descname"><span class="pre">a_h</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">8956127974.560001</span></em><a class="headerlink" href="#Code_files.TRAPPIST1_parameters.a_h" title="Link to this definition"></a></dt>
+<dd><p>Semi-major axis of TRAPPIST-1 h in meters (Ducrot et al. 2020)</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Code_files.TRAPPIST1_parameters.P_h">
+<span class="sig-prename descclassname"><span class="pre">Code_files.TRAPPIST1_parameters.</span></span><span class="sig-name descname"><span class="pre">P_h</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">18.7672745</span></em><a class="headerlink" href="#Code_files.TRAPPIST1_parameters.P_h" title="Link to this definition"></a></dt>
+<dd><p>Orbital period of TRAPPIST-1 h in days (Ducrot et al. 2020)</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Code_files.TRAPPIST1_parameters.i_h">
+<span class="sig-prename descclassname"><span class="pre">Code_files.TRAPPIST1_parameters.</span></span><span class="sig-name descname"><span class="pre">i_h</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1.5666598964676701</span></em><a class="headerlink" href="#Code_files.TRAPPIST1_parameters.i_h" title="Link to this definition"></a></dt>
+<dd><p>Orbital inclination of TRAPPIST-1 h in radians (Ducrot et al. 2020)</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Code_files.TRAPPIST1_parameters.omega_h">
+<span class="sig-prename descclassname"><span class="pre">Code_files.TRAPPIST1_parameters.</span></span><span class="sig-name descname"><span class="pre">omega_h</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">5.915269900859182</span></em><a class="headerlink" href="#Code_files.TRAPPIST1_parameters.omega_h" title="Link to this definition"></a></dt>
+<dd><p>Argument of periastron of TRAPPIST-1 h in radians (Grimm et al. 2018)</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Code_files.TRAPPIST1_parameters.e_h">
+<span class="sig-prename descclassname"><span class="pre">Code_files.TRAPPIST1_parameters.</span></span><span class="sig-name descname"><span class="pre">e_h</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0.00567</span></em><a class="headerlink" href="#Code_files.TRAPPIST1_parameters.e_h" title="Link to this definition"></a></dt>
+<dd><p>Orbital eccentricity of TRAPPIST-1 h (Grimm et al. 2018)</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="Code_files.TRAPPIST1_parameters.R_h">
+<span class="sig-prename descclassname"><span class="pre">Code_files.TRAPPIST1_parameters.</span></span><span class="sig-name descname"><span class="pre">R_h</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">4815493.435</span></em><a class="headerlink" href="#Code_files.TRAPPIST1_parameters.R_h" title="Link to this definition"></a></dt>
+<dd><p>Radius of TRAPPIST-1 h in meters (Agol et al. 2021)</p>
+</dd></dl>
+
+</section>
+<section id="module-Code_files.TTV">
+<span id="code-files-ttv-module"></span><h2>Code_files.TTV module<a class="headerlink" href="#module-Code_files.TTV" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="Code_files.TTV.period_TTV">
+<span class="sig-prename descclassname"><span class="pre">Code_files.TTV.</span></span><span class="sig-name descname"><span class="pre">period_TTV</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">P</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transit_start</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transit_end</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Code_files.TTV.period_TTV" title="Link to this definition"></a></dt>
+<dd><p>Computes the modified orbital periods (in days) of the planet due to the TTVs</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>P</strong> (<em>float</em>) – the initial period of the planet without TTVs (in days)</p></li>
+<li><p><strong>transit_start</strong> (<em>numpy.ndarray</em>) – the start of the transit (in days)</p></li>
+<li><p><strong>transit_end</strong> (<em>numpy.ndarray</em>) – the end of the transit (in days)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>P_TTV</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Code_files.TTV.transit_peak">
+<span class="sig-prename descclassname"><span class="pre">Code_files.TTV.</span></span><span class="sig-name descname"><span class="pre">transit_peak</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">transit_start</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transit_end</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Code_files.TTV.transit_peak" title="Link to this definition"></a></dt>
+<dd><p>Computes the peak of the transit (in days)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>transit_start</strong> (<em>numpy.ndarray</em>) – the start of the transit (in days)</p></li>
+<li><p><strong>transit_end</strong> (<em>numpy.ndarray</em>) – the end of the transit (in days)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>transit_peak</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Code_files.TTV.main">
+<span class="sig-prename descclassname"><span class="pre">Code_files.TTV.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Code_files.TTV.main" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-Code_files.Transits">
+<span id="code-files-transits-module"></span><h2>Code_files.Transits module<a class="headerlink" href="#module-Code_files.Transits" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="Code_files.Transits.transit_depth">
+<span class="sig-prename descclassname"><span class="pre">Code_files.Transits.</span></span><span class="sig-name descname"><span class="pre">transit_depth</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">R_planet</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">R_star</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Code_files.Transits.transit_depth" title="Link to this definition"></a></dt>
+<dd><p>Determines the depth of an exoplanet transit.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>R_planet</strong> – the radius of the planet (in m)</p></li>
+<li><p><strong>R_star</strong> (<em>float</em>) – the radius of the star (in m)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>delta_F</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Code_files.Transits.transit_impact_parameter">
+<span class="sig-prename descclassname"><span class="pre">Code_files.Transits.</span></span><span class="sig-name descname"><span class="pre">transit_impact_parameter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">i</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">e</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">R_star</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">omega</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Code_files.Transits.transit_impact_parameter" title="Link to this definition"></a></dt>
+<dd><p>Determines the impact parameter of an exoplanet transit.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>a</strong> (<em>float</em>) – the semimajor axis (in m)</p></li>
+<li><p><strong>i</strong> (<em>float</em>) – the inclination (in rad)</p></li>
+<li><p><strong>e</strong> (<em>float</em>) – the eccentricity</p></li>
+<li><p><strong>R_star</strong> (<em>float</em>) – the radius of the star (in m)</p></li>
+<li><p><strong>omega</strong> (<em>float</em>) – the argument of pericentre (in rad)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>b</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Code_files.Transits.eclipse_impact_parameter">
+<span class="sig-prename descclassname"><span class="pre">Code_files.Transits.</span></span><span class="sig-name descname"><span class="pre">eclipse_impact_parameter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">i</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">e</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">R_star</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">omega</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Code_files.Transits.eclipse_impact_parameter" title="Link to this definition"></a></dt>
+<dd><p>Determines the impact parameter of an exoplanet eclipse.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>a</strong> (<em>float</em>) – the semimajor axis (in m)</p></li>
+<li><p><strong>i</strong> (<em>float</em>) – the inclination (in rad)</p></li>
+<li><p><strong>e</strong> (<em>float</em>) – the eccentricity</p></li>
+<li><p><strong>R_star</strong> (<em>float</em>) – the radius of the star (in m)</p></li>
+<li><p><strong>omega</strong> (<em>float</em>) – the argument of pericentre (in rad)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>b</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Code_files.Transits.total_transit_duration">
+<span class="sig-prename descclassname"><span class="pre">Code_files.Transits.</span></span><span class="sig-name descname"><span class="pre">total_transit_duration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">P</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">R_star</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">R_planet</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">i</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">e</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">omega</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Code_files.Transits.total_transit_duration" title="Link to this definition"></a></dt>
+<dd><p>Determines the total duration of an exoplanet transit (in s).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>P</strong> (<em>float</em>) – the orbital period (in s)</p></li>
+<li><p><strong>a</strong> (<em>float</em>) – the semimajor axis (in m)</p></li>
+<li><p><strong>R_star</strong> (<em>float</em>) – the radius of the star (in m)</p></li>
+<li><p><strong>R_planet</strong> (<em>float</em>) – the radius of the planet (in m)</p></li>
+<li><p><strong>i</strong> (<em>float</em>) – the inclination (in rad)</p></li>
+<li><p><strong>e</strong> (<em>float</em>) – the eccentricity</p></li>
+<li><p><strong>omega</strong> (<em>float</em>) – the argument of pericentre (in rad)</p></li>
+<li><p><strong>b</strong> (<em>float</em>) – the transit impact parameter</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>t_total</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Code_files.Transits.flat_transit_duration">
+<span class="sig-prename descclassname"><span class="pre">Code_files.Transits.</span></span><span class="sig-name descname"><span class="pre">flat_transit_duration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">P</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">R_star</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">R_planet</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">i</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">e</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">omega</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Code_files.Transits.flat_transit_duration" title="Link to this definition"></a></dt>
+<dd><p>Determines the flat duration of an exoplanet transit (in s).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>P</strong> (<em>float</em>) – the orbital period (in s)</p></li>
+<li><p><strong>a</strong> (<em>float</em>) – the semimajor axis (in m)</p></li>
+<li><p><strong>R_star</strong> (<em>float</em>) – the radius of the star (in m)</p></li>
+<li><p><strong>R_planet</strong> (<em>float</em>) – the radius of the planet (in m)</p></li>
+<li><p><strong>i</strong> (<em>float</em>) – the inclination (in rad)</p></li>
+<li><p><strong>e</strong> (<em>float</em>) – the eccentricity</p></li>
+<li><p><strong>omega</strong> (<em>float</em>) – the argument of pericentre (in rad)</p></li>
+<li><p><strong>b</strong> (<em>float</em>) – the transit impact parameter</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>t_flat</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Code_files.Transits.total_eclipse_duration">
+<span class="sig-prename descclassname"><span class="pre">Code_files.Transits.</span></span><span class="sig-name descname"><span class="pre">total_eclipse_duration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">P</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">R_star</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">R_planet</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">i</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">e</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">omega</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Code_files.Transits.total_eclipse_duration" title="Link to this definition"></a></dt>
+<dd><p>Determines the total duration of an exoplanet eclipse (in s).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>P</strong> (<em>float</em>) – the orbital period (in s)</p></li>
+<li><p><strong>a</strong> (<em>float</em>) – the semimajor axis (in m)</p></li>
+<li><p><strong>R_star</strong> (<em>float</em>) – the radius of the star (in m)</p></li>
+<li><p><strong>R_planet</strong> (<em>float</em>) – the radius of the planet (in m)</p></li>
+<li><p><strong>i</strong> (<em>float</em>) – the inclination (in rad)</p></li>
+<li><p><strong>e</strong> (<em>float</em>) – the eccentricity</p></li>
+<li><p><strong>omega</strong> (<em>float</em>) – the argument of pericentre (in rad)</p></li>
+<li><p><strong>b</strong> (<em>float</em>) – the eclipse impact parameter</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>t_total</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Code_files.Transits.flat_eclipse_duration">
+<span class="sig-prename descclassname"><span class="pre">Code_files.Transits.</span></span><span class="sig-name descname"><span class="pre">flat_eclipse_duration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">P</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">R_star</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">R_planet</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">i</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">e</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">omega</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Code_files.Transits.flat_eclipse_duration" title="Link to this definition"></a></dt>
+<dd><p>Determines the flat duration of an exoplanet eclipse (in s).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>P</strong> (<em>float</em>) – the orbital period (in s)</p></li>
+<li><p><strong>a</strong> (<em>float</em>) – the semimajor axis (in m)</p></li>
+<li><p><strong>R_star</strong> (<em>float</em>) – the radius of the star (in m)</p></li>
+<li><p><strong>R_planet</strong> (<em>float</em>) – the radius of the planet (in m)</p></li>
+<li><p><strong>i</strong> (<em>float</em>) – the inclination (in rad)</p></li>
+<li><p><strong>e</strong> (<em>float</em>) – the eccentricity</p></li>
+<li><p><strong>omega</strong> (<em>float</em>) – the argument of pericentre (in rad)</p></li>
+<li><p><strong>b</strong> (<em>float</em>) – the eclipse impact parameter</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>t_flat</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Code_files.Transits.eclipse_phase">
+<span class="sig-prename descclassname"><span class="pre">Code_files.Transits.</span></span><span class="sig-name descname"><span class="pre">eclipse_phase</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">P</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">R_star</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">R_planet</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">i</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">e</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">omega</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Code_files.Transits.eclipse_phase" title="Link to this definition"></a></dt>
+<dd><p>Determines the phases of an exoplanet for which its secondary eclipse starts and ends (centered at 0 or 1).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>P</strong> (<em>float</em>) – the orbital period (in s)</p></li>
+<li><p><strong>a</strong> (<em>float</em>) – the semimajor axis (in m)</p></li>
+<li><p><strong>R_star</strong> (<em>float</em>) – the radius of the star (in m)</p></li>
+<li><p><strong>R_planet</strong> (<em>float</em>) – the radius of the planet (in m)</p></li>
+<li><p><strong>i</strong> (<em>float</em>) – the inclination (in rad)</p></li>
+<li><p><strong>e</strong> (<em>float</em>) – the eccentricity</p></li>
+<li><p><strong>omega</strong> (<em>float</em>) – the argument of pericentre (in rad)</p></li>
+<li><p><strong>b</strong> (<em>float</em>) – the impact parameter</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>phase_eclipse_start, phase_eclipse_end</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Code_files.Transits.eclipse">
+<span class="sig-prename descclassname"><span class="pre">Code_files.Transits.</span></span><span class="sig-name descname"><span class="pre">eclipse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">P</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">R_star</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">R_planet</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">i</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phase</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">e</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">omega</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Code_files.Transits.eclipse" title="Link to this definition"></a></dt>
+<dd><p>Determines if an exoplanet is in eclipse or not at a given phase.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>P</strong> (<em>float</em>) – the orbital period (in s)</p></li>
+<li><p><strong>a</strong> (<em>float</em>) – the semimajor axis (in m)</p></li>
+<li><p><strong>R_star</strong> (<em>float</em>) – the radius of the star (in m)</p></li>
+<li><p><strong>R_planet</strong> (<em>float</em>) – the radius of the planet (in m)</p></li>
+<li><p><strong>i</strong> (<em>float</em>) – the inclination (in rad)</p></li>
+<li><p><strong>phase</strong> (<em>float</em>) – the phase of the exoplanet (in rad)</p></li>
+<li><p><strong>e</strong> (<em>float</em>) – the eccentricity</p></li>
+<li><p><strong>omega</strong> (<em>float</em>) – the argument of pericentre (in rad)</p></li>
+<li><p><strong>b</strong> (<em>float</em>) – the impact parameter</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>in_eclipse</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Code_files.Transits.main">
+<span class="sig-prename descclassname"><span class="pre">Code_files.Transits.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Code_files.Transits.main" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Exoplanets_Phase_Curves documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Louis-Julien Cartigny.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
