@@ -1,7 +1,7 @@
 Phoenix module
 ==============
 
-.. automodule:: Phoenix
+.. automodule:: Code_files.Phoenix
    :members:
    :show-inheritance:
    :undoc-members:

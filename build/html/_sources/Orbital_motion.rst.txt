@@ -1,7 +1,7 @@
 Orbital\_motion module
 ======================
 
-.. automodule:: Orbital_motion
+.. automodule:: Code_files.Orbital_motion
    :members:
    :show-inheritance:
    :undoc-members:

@@ -1,7 +1,7 @@
 Flux\_wavelength module
 =======================
 
-.. automodule:: Flux_wavelength
+.. automodule:: Code_files.Flux_wavelength
    :members:
    :show-inheritance:
    :undoc-members:

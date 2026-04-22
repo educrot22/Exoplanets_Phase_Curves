@@ -1,7 +1,7 @@
 TTV module
 ==========
 
-.. automodule:: TTV
+.. automodule:: Code_files.TTV
    :members:
    :show-inheritance:
    :undoc-members:
