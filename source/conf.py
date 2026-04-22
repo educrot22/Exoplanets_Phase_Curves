@@ -1,3 +1,14 @@
+<<<<<<< HEAD:docs/source/conf.py
+=======
+import os
+import sys
+sys.path.insert(0, os.path.abspath(".."))
+
+# sys.path.insert(0, os.path.abspath("../.."))
+# print("DEBUG sys.path:", sys.path[:5])  # affiche les premiers chemins pour debug
+# print("DEBUG cwd:", os.getcwd())  # affiche le répertoire courant de compilation
+
+>>>>>>> bdf0442cf6998161f224680417922763a7d2f26b:source/conf.py
 # Configuration file for the Sphinx documentation builder.
 #
 # For the full list of built-in configuration values, see the documentation:

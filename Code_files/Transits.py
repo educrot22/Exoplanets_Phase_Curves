@@ -7,8 +7,8 @@
 
 import numpy as np
 import matplotlib.pyplot as plt
-from TRAPPIST1_parameters import *
-# from Phase_curve_v1 import phase_planet
+from Code_files.TRAPPIST1_parameters import *
+#from Phase_curve_v1 import phase_angle, phase_function, star_planet_separation, surface_sphere, phase_curve, flux_star, flux_planet
 
 def transit_depth(R_planet, R_star):
     """

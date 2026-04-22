@@ -12,9 +12,12 @@ from matplotlib.ticker import MultipleLocator
 # from matplotlib import container
 import matplotlib as mpl
 from astropy.time import Time
+from pathlib import Path
+# racine du projet (Exoplanets_Phase_Curves/)
+Code_files_DIR = Path(__file__).resolve().parents[1] / "Code_files"
 
-from Phase_curve_TTV import phase_curve_simulation
-from JWST_Obs_simu import phase_curve_visit
+from Code_files.Phase_curve_TTV import phase_curve_simulation
+from Code_files.JWST_Obs_simu import phase_curve_visit
 
 # Set the style for the plots
 
@@ -78,8 +81,7 @@ points_offset = True # Write True if you want to add an offset to the observatio
 
 # Simulations
 
-# program_ID, visit, t_start, t_end, filter_obs, flux_obs, err_obs = np.loadtxt("JWST_Obs_times.txt", delimiter=',', skiprows=2, unpack=True,dtype=str)
-program_ID, visit, t_start, t_end, filter_obs, flux_obs, err_obs = np.loadtxt("JWST_Obs_times.txt", usecols=(0,1,2,3,4,7,8), delimiter=',', skiprows=2, unpack=True,dtype=str) # With new stellar flux values
+program_ID, visit, t_start, t_end, filter_obs, flux_obs, err_obs = np.loadtxt(Code_files_DIR / "JWST_Obs_times.txt", delimiter=',', skiprows=2, unpack=True,dtype=str)
 
 flux_obs = flux_obs.astype(float)
 err_obs = err_obs.astype(float)
@@ -128,25 +130,25 @@ fig_overall = plt.figure()
 if plot_individual_planets:
     for p in planets:
         if filter == None:
-            t_simu, phase_simu = np.loadtxt("Phase_curve_TTV_output/phase_curve_"+p+"_bolometric_"+str(t0)+".txt", delimiter=",", skiprows=1, unpack=True)
+            t_simu, phase_simu = np.loadtxt(Code_files_DIR / "Phase_curve_TTV_output" / f"phase_curve_{p}_bolometric_{t0}.txt", delimiter=",", skiprows=1, unpack=True)
         else:
             if redistribution == 0:
-                t_simu, phase_simu = np.loadtxt("Phase_curve_TTV_output/phase_curve_"+p+"_"+filter+"_"+model+"_"+unit+"_"+str(t0)+".txt", delimiter=",", skiprows=1, unpack=True)
+                t_simu, phase_simu = np.loadtxt(Code_files_DIR / "Phase_curve_TTV_output" / f"phase_curve_{p}_{filter}_{model}_{unit}_{t0}.txt", delimiter=",", skiprows=1, unpack=True)
             else:
-                t_simu, phase_simu = np.loadtxt("Phase_curve_TTV_output/phase_curve_"+p+"_atm_"+filter+"_"+model+"_"+unit+"_"+str(t0)+".txt", delimiter=",", skiprows=1, unpack=True)
+                t_simu, phase_simu = np.loadtxt(Code_files_DIR / "Phase_curve_TTV_output" / f"phase_curve_{p}_atm_{filter}_{model}_{unit}_{t0}.txt", delimiter=",", skiprows=1, unpack=True)
         plt.plot(t_simu, phase_simu, '--', label=p+" (bare rock)", linewidth=0.5)
 
 if filter == None:
-    t_total_simu, phase_curve_total_simu = np.loadtxt("Phase_curve_TTV_output/phase_curve_total_"+planets+"_bolometric_"+str(t0)+".txt", delimiter=",",skiprows=1, unpack=True)
+    t_total_simu, phase_curve_total_simu = np.loadtxt(Code_files_DIR / "Phase_curve_TTV_output" / f"phase_curve_total_{planets}_bolometric_{t0}.txt", delimiter=",",skiprows=1, unpack=True)
 else:
     if redistribution == 0:
-        t_total_simu, phase_curve_total_simu = np.loadtxt("Phase_curve_TTV_output/phase_curve_total_"+planets+"_"+filter+"_"+model+"_"+unit+"_"+str(t0)+".txt", delimiter=",",skiprows=1, unpack=True)
+        t_total_simu, phase_curve_total_simu = np.loadtxt(Code_files_DIR / "Phase_curve_TTV_output" / f"phase_curve_total_{planets}_{filter}_{model}_{unit}_{t0}.txt", delimiter=",",skiprows=1, unpack=True)
     else:
-        t_total_simu, phase_curve_total_simu = np.loadtxt("Phase_curve_TTV_output/phase_curve_total_"+planets+"_atm_"+filter+"_"+model+"_"+unit+"_"+str(t0)+".txt", delimiter=",",skiprows=1, unpack=True)
+        t_total_simu, phase_curve_total_simu = np.loadtxt(Code_files_DIR / "Phase_curve_TTV_output" / f"phase_curve_total_{planets}_atm_{filter}_{model}_{unit}_{t0}.txt", delimiter=",",skiprows=1, unpack=True)
 
 if comparison:
-    t_total_simu_atm, phase_curve_total_simu_atm = np.loadtxt("Phase_curve_TTV_output/phase_curve_total_"+planets+"_atm_"+filter+"_"+model+"_"+unit+"_"+str(t0)+".txt", delimiter=",",skiprows=1, unpack=True)
-    plt.plot(t_total_simu_atm, phase_curve_total_simu_atm, '--', color='grey', label="Total (atmospheres)")
+    t_total_simu_atm, phase_curve_total_simu_atm = np.loadtxt(Code_files_DIR / "Phase_curve_TTV_output" / f"phase_curve_total_{planets}_atm_{filter}_{model}_{unit}_{t0}.txt", delimiter=",",skiprows=1, unpack=True)
+    plt.plot(t_total_simu_atm, phase_curve_total_simu_atm, color='black', label="Total (atmospheres)")
 
 colors = ['blue', 'orange', 'green', 'red', 'purple', 'brown', 'pink']
 j = -1
@@ -165,12 +167,12 @@ for i in range(len(t_start)):
     t0 = t_start[i]
     offset = 0
     if filter == None:
-        t_visit, phase_curve_total_visit = np.loadtxt("Phase_curve_TTV_output/phase_curve_total_"+planets+"_bolometric_"+str(t0)+".txt", delimiter=',',skiprows=1, unpack=True)
+        t_visit, phase_curve_total_visit = np.loadtxt(Code_files_DIR / "Phase_curve_TTV_output" / f"phase_curve_total_{planets}_bolometric_{t0}.txt", delimiter=',',skiprows=1, unpack=True)
     else:
         if redistribution == 0:
-            t_visit, phase_curve_total_visit = np.loadtxt("Phase_curve_TTV_output/phase_curve_total_"+planets+"_"+filter+"_"+model+"_"+unit+"_"+str(t0)+".txt", delimiter=',',skiprows=1, unpack=True)
+            t_visit, phase_curve_total_visit = np.loadtxt(Code_files_DIR / "Phase_curve_TTV_output" / f"phase_curve_total_{planets}_{filter}_{model}_{unit}_{t0}.txt", delimiter=',',skiprows=1, unpack=True)
         else:
-            t_visit, phase_curve_total_visit = np.loadtxt("Phase_curve_TTV_output/phase_curve_total_"+planets+"_atm_"+filter+"_"+model+"_"+unit+"_"+str(t0)+".txt", delimiter=',',skiprows=1, unpack=True)
+            t_visit, phase_curve_total_visit = np.loadtxt(Code_files_DIR / "Phase_curve_TTV_output" / f"phase_curve_total_{planets}_atm_{filter}_{model}_{unit}_{t0}.txt", delimiter=',',skiprows=1, unpack=True)
 
     if i == 0 or program_ID[i] != program_ID[i-1]:
         j+=1

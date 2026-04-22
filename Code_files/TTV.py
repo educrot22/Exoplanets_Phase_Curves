@@ -7,7 +7,7 @@
 
 import numpy as np
 import matplotlib.pyplot as plt
-from TRAPPIST1_parameters import *
+from Code_files.TRAPPIST1_parameters import *
 
 def period_TTV(P, transit_start, transit_end):
     """

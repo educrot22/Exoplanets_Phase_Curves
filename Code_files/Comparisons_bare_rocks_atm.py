@@ -16,8 +16,8 @@ from astropy.time import Time
 from matplotlib.ticker import MultipleLocator
 import matplotlib.gridspec as gridspec
 
-from Phase_curve_TTV import phase_curve_simulation
-
+#from Phase_curve_TTV import phase_curve_simulation
+from Code_files.Phase_curve_TTV import phase_curve_simulation
 
 # Settings
 

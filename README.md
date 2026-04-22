@@ -1,5 +1,9 @@
-## Exoplanets_Phase_Curves
+## 📚 Documentation
 
-This code was written during a Master's internship at the Institut d'astrophysique de Paris (IAP) and at the Laboratoire d'Instrumentation et de Recherche en Astrophysique (LIRA) of Paris Observatory. It was used to model the phases curves and the eclipses of the planets of TRAPPIST-1 but feel free to adapt it to your needs.
+The Sphinx documentation is automatically built from the `dev` branch.
 
-Documentation available at: https://lj-cartigny.github.io/Exoplanets_Phase_Curves/ (Writing in progress)
+👉 Download latest HTML docs here:
+- Go to **Actions tab**
+- Open latest workflow run
+- Download artifact: `sphinx-docs`
+- Open `index.html` in your browser

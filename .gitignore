@@ -6,4 +6,4 @@ Code_files/__pycache__
 
 .vscode
 
-docs/build/
+docs/build/.DS_Store

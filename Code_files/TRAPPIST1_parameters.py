@@ -9,7 +9,7 @@
 This module contains some parameters for the planets of the TRAPPIST-1 system.
 """
 
-from Solar_System_constants import *
+from Code_files.Solar_System_constants import *
 import numpy as np
 from pathlib import Path
 DATA_DIR = Path(__file__).resolve().parent

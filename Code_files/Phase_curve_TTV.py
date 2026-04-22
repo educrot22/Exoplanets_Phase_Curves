@@ -7,11 +7,11 @@
 
 import numpy as np
 import matplotlib.pyplot as plt
-from TRAPPIST1_parameters import *
-from Phase_curve_v1 import star_planet_separation, flux_star, flux_planet, luminosity_planet_dayside, phase_curve
-from Flux_wavelength import flux_ratio_miri, planet_equilibirium_temperature, flux_planet_miri, integrate_flux_model_mJy
-from Transits import eclipse, eclipse_impact_parameter
-from Orbital_motion import compute_true_anomaly
+from Code_files.TRAPPIST1_parameters import *
+from Code_files.Phase_curve_v1 import star_planet_separation, flux_star, flux_planet, luminosity_planet_dayside, phase_curve
+from Code_files.Flux_wavelength import flux_ratio_miri, planet_equilibirium_temperature, flux_planet_miri, integrate_flux_model_mJy
+from Code_files.Transits import eclipse, eclipse_impact_parameter
+from Code_files.Orbital_motion import compute_true_anomaly
 
 def phase_TTV(P_TTV,t0,t_end,transit_peaks,nb_points):
     """

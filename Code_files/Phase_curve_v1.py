@@ -7,9 +7,9 @@
 
 import numpy as np
 import matplotlib.pyplot as plt
-from Orbital_motion import compute_true_anomaly
-from Transits import eclipse, eclipse_impact_parameter
-from TRAPPIST1_parameters import *
+from Code_files.Orbital_motion import compute_true_anomaly
+from Code_files.Transits import eclipse, eclipse_impact_parameter
+from Code_files.TRAPPIST1_parameters import *
 
 def phase_angle(omega, nu, i):
     """
