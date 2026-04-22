@@ -2,7 +2,9 @@
 =======
 import os
 import sys
-sys.path.insert(0, os.path.abspath(".."))
+# sys.path.insert(0, os.path.abspath('..'))
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, BASE_DIR)
 
 # sys.path.insert(0, os.path.abspath("../.."))
 # print("DEBUG sys.path:", sys.path[:5])  # affiche les premiers chemins pour debug
@@ -39,6 +41,7 @@ html_theme = 'alabaster'
 html_static_path = ['_static']
 
 
+<<<<<<< HEAD
 extensions = [
     "sphinx.ext.autodoc",
     "sphinx.ext.napoleon",  # Google / NumPy docstrings
@@ -56,3 +59,10 @@ autodoc_default_options = {
     "undoc-members": True,
     "show-inheritance": True,
 }
+=======
+#     "Code_files.TRAPPIST1_parameters",
+# ]
+
+print("SYS PATH START:", sys.path[:3])
+print("PROJECT ROOT:", BASE_DIR)
+>>>>>>> a2123c21df2fcd9b74867bbfb3c5e49923123a59

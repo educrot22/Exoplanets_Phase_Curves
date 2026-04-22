@@ -18,9 +18,7 @@
       <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Transits module" href="Transits.html" />
-    <link rel="prev" title="TRAPPIST1_parameters module" href="TRAPPIST1_parameters.html" /> 
+    <link rel="search" title="Search" href="search.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -42,26 +40,8 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Code_files</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="Comparison_GO3077.html">Comparison_GO3077 module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Comparisons_bare_rocks_atm.html">Comparisons_bare_rocks_atm module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Flux_wavelength.html">Flux_wavelength module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="JWST_Obs_plot.html">JWST_Obs_plot module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="JWST_Obs_simu.html">JWST_Obs_simu module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="MIRI_filter.html">MIRI_filter module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Orbital_motion.html">Orbital_motion module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Phase_curve_TTV.html">Phase_curve_TTV module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Phase_curve_v1.html">Phase_curve_v1 module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Phase_curves_comparison.html">Phase_curves_comparison module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Phoenix.html">Phoenix module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Solar_System_constants.html">Solar_System_constants module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="TRAPPIST1_parameters.html">TRAPPIST1_parameters module</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">TTV module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Transits.html">Transits module</a></li>
-</ul>
-</li>
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="Code_files.html">Code_files functions</a></li>
 </ul>
 
         </div>
@@ -78,7 +58,6 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="modules.html">Code_files</a></li>
       <li class="breadcrumb-item active">TTV module</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/TTV.rst.txt" rel="nofollow"> View page source</a>
@@ -89,17 +68,60 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="ttv-module">
-<h1>TTV module<a class="headerlink" href="#ttv-module" title="Link to this heading"></a></h1>
+  <section id="module-Code_files.TTV">
+<span id="ttv-module"></span><h1>TTV module<a class="headerlink" href="#module-Code_files.TTV" title="Link to this heading"></a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="Code_files.TTV.period_TTV">
+<span class="sig-prename descclassname"><span class="pre">Code_files.TTV.</span></span><span class="sig-name descname"><span class="pre">period_TTV</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">P</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transit_start</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transit_end</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Code_files.TTV.period_TTV" title="Link to this definition"></a></dt>
+<dd><p>Computes the modified orbital periods (in days) of the planet due to the TTVs</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>P</strong> (<em>float</em>) – the initial period of the planet without TTVs (in days)</p></li>
+<li><p><strong>transit_start</strong> (<em>numpy.ndarray</em>) – the start of the transit (in days)</p></li>
+<li><p><strong>transit_end</strong> (<em>numpy.ndarray</em>) – the end of the transit (in days)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>P_TTV</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Code_files.TTV.transit_peak">
+<span class="sig-prename descclassname"><span class="pre">Code_files.TTV.</span></span><span class="sig-name descname"><span class="pre">transit_peak</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">transit_start</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transit_end</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Code_files.TTV.transit_peak" title="Link to this definition"></a></dt>
+<dd><p>Computes the peak of the transit (in days)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>transit_start</strong> (<em>numpy.ndarray</em>) – the start of the transit (in days)</p></li>
+<li><p><strong>transit_end</strong> (<em>numpy.ndarray</em>) – the end of the transit (in days)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>transit_peak</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Code_files.TTV.main">
+<span class="sig-prename descclassname"><span class="pre">Code_files.TTV.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Code_files.TTV.main" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
 </section>
 
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="TRAPPIST1_parameters.html" class="btn btn-neutral float-left" title="TRAPPIST1_parameters module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="Transits.html" class="btn btn-neutral float-right" title="Transits module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-    </div>
+          <footer>
 
   <hr/>
 

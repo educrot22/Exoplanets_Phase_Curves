@@ -1,8 +1,5 @@
-Code\_files package
-===================
-
-Submodules
-----------
+Code\_files functions
+======================
 
 Code\_files.Comparison\_GO3077 module
 -------------------------------------
@@ -132,10 +129,3 @@ Code\_files.Transits module
    :show-inheritance:
    :undoc-members:
 
-Module contents
----------------
-
-.. automodule:: Code_files
-   :members:
-   :show-inheritance:
-   :undoc-members:
