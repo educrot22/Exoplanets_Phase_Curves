@@ -2,7 +2,6 @@ alabaster==1.0.0
 annotated-types==0.7.0
 anyio==4.13.0
 aplus==0.11.0
-appnope @ file:///home/conda/feedstock_root/build_artifacts/appnope_1733332318622/work
 asteval==1.0.8
 astropy==6.1.7
 astropy-iers-data==0.2026.3.23.0.51.38
